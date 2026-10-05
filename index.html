@@ -5,140 +5,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leafwise Plant Care</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Верхнє меню -->
     <header>
-        <h1>Leafwise Plant Care</h1>
+
+        <div class="logo">
+            <span>Leafwise</span>
+            <b>PLANT CARE</b>
+        </div>
+
+        <nav>
+            <a href="index.html">The Garden</a>
+            <a href="add.html">Add a Plant</a>
+        </nav>
+
     </header>
 
-    <nav>
-        <a href="index.html">The Garden</a> |
-        <a href="add.html">Add a plant</a>
-    </nav>
 
-    <section>
+    <!-- Головний екран -->
+    <section class="hero">
 
-        <h2>Every plant deserves to thrive.</h2>
+        <div class="hero-content">
 
-        <p>
-            Explore care guides for 5 plants. Share your own.
-            Ask questions. Build your green world with confidence.
-        </p>
+            <p class="small-title">
+                A LIVING ENCYCLOPEDIA
+            </p>
 
-        <a href="index.html">
-            <button>Explore the garden</button>
-        </a>
+            <h1>
+                Every plant<br>
+                <span>deserves</span> to thrive.
+            </h1>
 
-        <br><br>
+            <p class="description">
+                Explore care guides for 5 plants. Share your own.
+                Ask questions. Build your green world with confidence.
+            </p>
 
-        <img src="pages/background.jpg" alt="Plants" width="200" height="300">
+            <a href="index.html" class="main-button">
+                Explore the garden
+                <span>→</span>
+            </a>
 
-        <h1>The Garden</h1>
+        </div>
+
+    </section>
+
+
+    <!-- The Garden -->
+    <section class="garden">
+
+        <h2>The Garden</h2>
 
         <input type="text" placeholder="Search plants...">
 
-        <br><br>
-
-        <button>All</button>
-        <button>Easy</button>
-        <button>Medium</button>
-        <button>Hard</button>
+        <div class="filters">
+            <button>All</button>
+            <button>Easy</button>
+            <button>Medium</button>
+            <button>Hard</button>
+        </div>
 
         <p>
             Click any plant for full care instructions and community Q&A.
         </p>
 
-        <hr>
 
-        <h2>Monstera</h2>
+        <!-- Monstera -->
+        <div class="plant">
 
-        <img src="monstera.jpg" alt="Monstera" width="200">
+            <img src="monstera.jpg" alt="Monstera">
 
-        <p>
-            Monstera is a tropical plant with large green leaves.
-            It likes bright indirect light and regular watering.
-        </p>
+            <div>
+                <h2>Monstera</h2>
 
-        <p><strong>Difficulty:</strong> Easy</p>
+                <p>
+                    Monstera is a tropical plant with large green leaves.
+                    It likes bright indirect light and regular watering.
+                </p>
 
-        <a href="pages/monstera.jpg">
-            <button>View plant</button>
-        </a>
+                <p>
+                    <strong>Difficulty:</strong> Easy
+                </p>
 
-        <hr>
+                <a href="monstera.html">
+                    <button>View plant</button>
+                </a>
+            </div>
 
-        <h2>Snake Plant</h2>
+        </div>
 
-        <img src="pages/snakeplant.jpg" alt="Snake Plant" width="200">
 
-        <p>
-            Snake Plant is an easy houseplant. It does not need
-            much water and can grow in different light conditions.
-        </p>
+        <!-- Snake Plant -->
+        <div class="plant">
 
-        <p><strong>Difficulty:</strong> Easy</p>
+            <img src="pages/snakeplant.jpg" alt="Snake Plant">
 
-        <a href="snakeplant.html">
-            <button>View plant</button>
-        </a>
+            <div>
+                <h2>Snake Plant</h2>
 
-        <hr>
+                <p>
+                    Snake Plant is an easy houseplant. It does not need
+                    much water and can grow in different light conditions.
+                </p>
 
-        <h2>Peace Lily</h2>
+                <p>
+                    <strong>Difficulty:</strong> Easy
+                </p>
 
-        <img src="pages/peacelily.jpg" alt="Peace Lily" width="200">
+                <a href="snakeplant.html">
+                    <button>View plant</button>
+                </a>
+            </div>
 
-        <p>
-            Peace Lily has beautiful green leaves and white flowers.
-            It prefers indirect light and moist soil.
-        </p>
+        </div>
 
-        <p><strong>Difficulty:</strong> Medium</p>
 
-        <a href="peacelily.html">
-            <button>View plant</button>
-        </a>
+        <!-- Peace Lily -->
+        <div class="plant">
 
-        <hr>
+            <img src="pages/peacelily.jpg" alt="Peace Lily">
 
-        <h2>Fiddle Leaf Fig</h2>
+            <div>
+                <h2>Peace Lily</h2>
 
-        <img src="pages/leaf.jpg" alt="Fiddle Leaf Fig" width="200">
+                <p>
+                    Peace Lily has beautiful green leaves and white flowers.
+                    It prefers indirect light and moist soil.
+                </p>
 
-        <p>
-            Fiddle Leaf Fig is a popular indoor plant with large leaves.
-            It needs bright light and regular care.
-        </p>
+                <p>
+                    <strong>Difficulty:</strong> Medium
+                </p>
 
-        <p><strong>Difficulty:</strong> Medium</p>
+                <a href="peacelily.html">
+                    <button>View plant</button>
+                </a>
 
-        <a href="leaf.html">
-            <button>View plant</button>
-        </a>
+            </div>
 
-        <hr>
+        </div>
 
-        <h2>Orchid</h2>
 
-        <img src="pages/orchid.jpg" alt="Orchid" width="200">
+        <!-- Fiddle Leaf Fig -->
+        <div class="plant">
 
-        <p>
-            Orchid is a beautiful flowering plant.
-            It needs bright indirect light and careful watering.
-        </p>
+            <img src="pages/leaf.jpg" alt="Fiddle Leaf Fig">
 
-        <p><strong>Difficulty:</strong> Hard</p>
+            <div>
+                <h2>Fiddle Leaf Fig</h2>
 
-        <a href="orchid.html">
-            <button>View plant</button>
-        </a>
+                <p>
+                    Fiddle Leaf Fig is a popular indoor plant with large leaves.
+                    It needs bright light and regular care.
+                </p>
+
+                <p>
+                    <strong>Difficulty:</strong> Medium
+                </p>
+
+                <a href="leaf.html">
+                    <button>View plant</button>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Orchid -->
+        <div class="plant">
+
+            <img src="pages/orchid.jpg" alt="Orchid">
+
+            <div>
+                <h2>Orchid</h2>
+
+                <p>
+                    Orchid is a beautiful flowering plant.
+                    It needs bright indirect light and careful watering.
+                </p>
+
+                <p>
+                    <strong>Difficulty:</strong> Hard
+                </p>
+
+                <a href="orchid.html">
+                    <button>View plant</button>
+                </a>
+
+            </div>
+
+        </div>
 
     </section>
 
+
     <footer>
-        <p>Leafwise &copy; A community plant care encyclopedia.</p>
+        <p>Leafwise © A community plant care encyclopedia.</p>
     </footer>
 
 </body>
