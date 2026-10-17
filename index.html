@@ -1,213 +1,417 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leafwise Plant Care</title>
+
+    <title>Leafwise</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-    <!-- Верхнє меню -->
-    <header>
-
-        <div class="logo">
+    <header class="navbar">
+        <a href="index.html" class="logo">
             <span>Leafwise</span>
             <b>PLANT CARE</b>
-        </div>
-
-        <nav>
-            <a href="index.html">The Garden</a>
-            <a href="add.html">Add a Plant</a>
+        </a>
+        <nav class="nav-links">
+            <a href="#garden">The Garden</a>
+            <a href="#add-plant" class="add-button">Add a Plant</a>
         </nav>
-
     </header>
-
-
-    <!-- Головний екран -->
     <section class="hero">
-
         <div class="hero-content">
-
             <p class="small-title">
-                A LIVING ENCYCLOPEDIA
+                Simple care for happier plants
             </p>
-
             <h1>
-                Every plant<br>
-                <span>deserves</span> to thrive.
+                Grow with<br>
+                <span>confidence.</span>
             </h1>
-
+            <img src="pages/background.jpg"
+                 alt="Plants"
+                 width="300"
+                 height="300">
             <p class="description">
-                Explore care guides for 5 plants. Share your own.
-                Ask questions. Build your green world with confidence.
+                Clear, practical care guides for the plants
+                that make a home feel alive.
             </p>
-
-            <a href="index.html" class="main-button">
-                Explore the garden
+            <button class="main-button"
+                onclick="document.querySelector('#garden').scrollIntoView({ behavior: 'smooth' })">
+                Browse 5 plants
                 <span>→</span>
-            </a>
-
+            </button>
         </div>
-
     </section>
-
-
-    <!-- The Garden -->
-    <section class="garden">
-
+    <section class="garden" id="garden">
         <h2>The Garden</h2>
-
-        <input type="text" placeholder="Search plants...">
-
+        <input
+            type="text"
+            id="plantSearch"
+            placeholder="Search plants..."
+            aria-label="Search plants"
+        >
         <div class="filters">
-            <button>All</button>
-            <button>Easy</button>
-            <button>Medium</button>
-            <button>Hard</button>
+            <button type="button"
+                    class="filter-btn active"
+                    data-filter="all">
+                All
+            </button>
+            <button type="button"
+                    class="filter-btn"
+                    data-filter="easy">
+                Easy
+            </button>
+            <button type="button"
+                    class="filter-btn"
+                    data-filter="medium">
+                Medium
+            </button>
+            <button type="button"
+                    class="filter-btn"
+                    data-filter="hard">
+                Hard
+            </button>
         </div>
-
         <p>
             Click any plant for full care instructions and community Q&A.
         </p>
-
-
-        <!-- Monstera -->
-        <div class="plant">
-
-            <img src="monstera.jpg" alt="Monstera">
-
-            <div>
+        <article class="plant"
+                 data-name="monstera"
+                 data-difficulty="easy">
+            <img src="pages/monstera.jpg"
+                 alt="Monstera"
+                 width="300"
+                 height="300">
+            <div class="plant-info">
                 <h2>Monstera</h2>
-
                 <p>
                     Monstera is a tropical plant with large green leaves.
                     It likes bright indirect light and regular watering.
                 </p>
-
                 <p>
                     <strong>Difficulty:</strong> Easy
                 </p>
-
-                <a href="monstera.html">
-                    <button>View plant</button>
+                <a href="monstera.html" class="plant-button">
+                    View plant
                 </a>
             </div>
-
-        </div>
-
-
-        <!-- Snake Plant -->
-        <div class="plant">
-
-            <img src="pages/snakeplant.jpg" alt="Snake Plant">
-
-            <div>
+        </article>
+        <article class="plant"
+                 data-name="snake plant"
+                 data-difficulty="easy">
+            <img src="pages/snakeplant.jpg"
+                 alt="Snake Plant"
+                 width="300"
+                 height="300">
+            <div class="plant-info">
                 <h2>Snake Plant</h2>
-
                 <p>
                     Snake Plant is an easy houseplant. It does not need
                     much water and can grow in different light conditions.
                 </p>
-
                 <p>
                     <strong>Difficulty:</strong> Easy
                 </p>
-
-                <a href="snakeplant.html">
-                    <button>View plant</button>
+                <a href="snake-plant.html" class="plant-button">
+                    View plant
                 </a>
             </div>
-
-        </div>
-
-
-        <!-- Peace Lily -->
-        <div class="plant">
-
-            <img src="pages/peacelily.jpg" alt="Peace Lily">
-
-            <div>
+        </article>
+        <article class="plant"
+                 data-name="peace lily"
+                 data-difficulty="medium">
+            <img src="pages/peacelily.jpg"
+                 alt="Peace Lily"
+                 width="300"
+                 height="300">
+            <div class="plant-info">
                 <h2>Peace Lily</h2>
-
                 <p>
                     Peace Lily has beautiful green leaves and white flowers.
                     It prefers indirect light and moist soil.
                 </p>
-
                 <p>
                     <strong>Difficulty:</strong> Medium
                 </p>
-
-                <a href="peacelily.html">
-                    <button>View plant</button>
+                <a href="peace-lily.html" class="plant-button">
+                    View plant
                 </a>
-
             </div>
-
-        </div>
-
-
-        <!-- Fiddle Leaf Fig -->
-        <div class="plant">
-
-            <img src="pages/leaf.jpg" alt="Fiddle Leaf Fig">
-
-            <div>
+        </article>
+        <article class="plant"
+                 data-name="fiddle leaf fig"
+                 data-difficulty="medium">
+            <img src="pages/leaf.jpg"
+                 alt="Fiddle Leaf Fig"
+                 width="300"
+                 height="300">
+            <div class="plant-info">
                 <h2>Fiddle Leaf Fig</h2>
-
                 <p>
                     Fiddle Leaf Fig is a popular indoor plant with large leaves.
                     It needs bright light and regular care.
                 </p>
-
                 <p>
                     <strong>Difficulty:</strong> Medium
                 </p>
-
-                <a href="leaf.html">
-                    <button>View plant</button>
+                <a href="fiddle-leaf.html" class="plant-button">
+                    View plant
                 </a>
-
             </div>
-
-        </div>
-
-
-        <!-- Orchid -->
-        <div class="plant">
-
-            <img src="pages/orchid.jpg" alt="Orchid">
-
-            <div>
+        </article>
+        <article class="plant"
+                 data-name="orchid"
+                 data-difficulty="hard">
+            <img src="pages/orchid.jpg"
+                 alt="Orchid"
+                 width="300"
+                 height="300">
+            <div class="plant-info">
                 <h2>Orchid</h2>
-
                 <p>
                     Orchid is a beautiful flowering plant.
                     It needs bright indirect light and careful watering.
                 </p>
-
                 <p>
                     <strong>Difficulty:</strong> Hard
                 </p>
-
-                <a href="orchid.html">
-                    <button>View plant</button>
+                <a href="orchid.html" class="plant-button">
+                    View plant
                 </a>
-
             </div>
-
-        </div>
-
+        </article>
+        <p id="noResults" hidden>
+            No plants found.
+        </p>
     </section>
+    <section class="add-plant" id="add-plant">
+        <div class="add-plant-content">
+            <p class="small-title">
+                SHARE YOUR GREEN WORLD
+            </p>
+            <h1>
+                Add a new<br>
+                <span>plant.</span>
+            </h1>
+            <p class="description">
+                Help our community grow by sharing your favourite plants
+                and their care instructions.
+            </p>
+        </div>
+        <form class="add-plant-form" id="plantForm">
+            <h2>Plant information</h2>
+            <p class="form-description">
+                Fill in the information about your plant.
+            </p>
+            <div class="add-form-group">
+                <label for="plantPhoto">
+                    Plant photo
+                </label>
+                <input
+                    type="file"
+                    id="plantPhoto"
+                    accept="image/*"
+                >
+                <img
+                    id="photoPreview"
+                    alt="Plant preview"
+                    hidden
+                >
+            </div>
+            <div class="add-form-row">
+                <div class="add-form-group">
+                    <label for="plantName">
+                        Plant name *
+                    </label>
+                    <input
+                        type="text"
+                        id="plantName"
+                        placeholder="Monstera"
+                        required
+                    >
+                </div>
+                <div class="add-form-group">
+                    <label for="scientificName">
+                        Scientific name
+                    </label>
+                    <input
+                        type="text"
+                        id="scientificName"
+                        placeholder="Monstera deliciosa"
+                    >
+                </div>
+            </div>
+            <div class="add-form-row">
+                <div class="add-form-group">
+                    <label for="difficulty">
+                        Difficulty *
+                    </label>
+                    <select id="difficulty" required>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="add-form-group">
+                    <label for="light">
+                        Light
+                    </label>
+                    <select id="light">
+                        <option value="Bright indirect light">
+                            Bright indirect light
+                        </option>
+                        <option value="Direct sunlight">
+                            Direct sunlight
+                        </option>
+                        <option value="Low light">
+                            Low light
+                        </option>
+                        <option value="Partial shade">
+                            Partial shade
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-form-row">
+                <div class="add-form-group">
+                    <label for="watering">
+                        Watering
+                    </label>
+                    <input
+                        type="text"
+                        id="watering"
+                        placeholder="Once a week"
+                    >
+                </div>
+                <div class="add-form-group">
+                    <label for="humidity">
+                        Humidity
+                    </label>
+                    <input
+                        type="text"
+                        id="humidity"
+                        placeholder="60-70%"
+                    >
+                </div>
+            </div>
+            <div class="add-form-row">
+                <div class="add-form-group">
+                    <label for="temperature">
+                        Temperature
+                    </label>
+                    <input
+                        type="text"
+                        id="temperature"
+                        placeholder="18-25°C"
+                    >
 
-
+                </div>
+                <div class="add-form-group">
+                    <label for="toxicity">
+                        Toxicity
+                    </label>
+                    <select id="toxicity">
+                        <option value="Non-toxic">
+                            Non-toxic
+                        </option>
+                        <option value="Toxic to pets">
+                            Toxic to pets
+                        </option>
+                        <option value="Toxic to humans">
+                            Toxic to humans
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-form-group">
+                <label for="description">
+                    Plant description
+                </label>
+                <textarea
+                    id="description"
+                    placeholder="Write about your plant..."
+                    rows="4"
+                ></textarea>
+            </div>
+            <div class="add-form-group">
+                <label for="careTips">
+                    Care tips
+                </label>
+                <textarea
+                    id="careTips"
+                    placeholder="Write some care tips..."
+                    rows="4"
+                ></textarea>
+            </div>
+            <button type="submit" class="submit-plant">
+                Add Plant
+            </button>
+        </form>
+    </section>
     <footer>
-        <p>Leafwise © A community plant care encyclopedia.</p>
+        <p>
+            Leafwise © A community plant care encyclopedia.
+        </p>
     </footer>
-
+    <script>
+        const searchInput = document.getElementById("plantSearch");
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const plants = document.querySelectorAll(".plant");
+        const noResults = document.getElementById("noResults");
+        let currentFilter = "all";
+        function filterPlants() {
+            const searchText = searchInput.value.toLowerCase().trim();
+            let visiblePlants = 0;
+            plants.forEach(function (plant) {
+                const name = plant.dataset.name;
+                const difficulty = plant.dataset.difficulty;
+                const text = plant.textContent.toLowerCase();
+                const matchesSearch =
+                    name.includes(searchText) ||
+                    text.includes(searchText);
+                const matchesFilter =
+                    currentFilter === "all" ||
+                    difficulty === currentFilter;
+                if (matchesSearch && matchesFilter) {
+                    plant.hidden = false;
+                    visiblePlants++;
+                } else {
+                    plant.hidden = true;
+                }
+            });
+            noResults.hidden = visiblePlants !== 0;
+        }
+        searchInput.addEventListener("input", filterPlants);
+        filterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                currentFilter = button.dataset.filter;
+                filterButtons.forEach(function (btn) {
+                    btn.classList.remove("active");
+                });
+                button.classList.add("active");
+                filterPlants();
+            });
+        });
+        const plantPhoto = document.getElementById("plantPhoto");
+        const photoPreview = document.getElementById("photoPreview");
+        plantPhoto.addEventListener("change", function () {
+            const file = plantPhoto.files[0];
+            if (file) {
+                photoPreview.src = URL.createObjectURL(file);
+                photoPreview.hidden = false;
+            } else {
+                photoPreview.hidden = true;
+            }
+        });
+        const plantForm = document.getElementById("plantForm");
+        plantForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const plantName = document.getElementById("plantName").value;
+            alert("Thank you! " + plantName + " has been submitted.");
+            plantForm.reset();
+            photoPreview.hidden = true;
+        });
+    </script>
 </body>
-
 </html>

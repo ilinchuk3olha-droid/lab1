@@ -1,155 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Monstera - Leafwise</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>Leafwise Plant Care</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">The garden</a> |
-        <a href="add.html">Add a plant</a>
-    </nav>
-
-    <hr>
-
-    <main>
-
-        <h1>Monstera</h1>
-
-        <img
-            src="pages/monstera.jpg"
-            alt="Monstera"
-            width="300"
-        >
-
-        <p>
-            Monstera is a tropical plant with large green leaves.
-            It likes bright indirect light and regular watering.
-        </p>
-
-        <hr>
-
-        <h2>Plant information</h2>
-
-        <p>
-            <strong>Scientific name:</strong>
-            Monstera deliciosa
-        </p>
-
-        <p>
-            <strong>Difficulty:</strong>
-            Easy
-        </p>
-
-        <p>
-            <strong>Light:</strong>
-            Bright indirect light
-        </p>
-
-        <p>
-            <strong>Watering:</strong>
-            Every 1–2 weeks
-        </p>
-
-        <p>
-            <strong>Humidity:</strong>
-            50–70%
-        </p>
-
-        <p>
-            <strong>Temperature:</strong>
-            18–27°C
-        </p>
-
-        <p>
-            <strong>Toxicity:</strong>
-            Toxic to pets
-        </p>
-
-        <hr>
-
-        <h2>Care instructions</h2>
-
-        <h3>Light</h3>
-
-        <p>
-            Place the Monstera in bright indirect light.
-            Avoid strong direct sunlight.
-        </p>
-
-        <h3>Water</h3>
-
-        <p>
-            Water when the top layer of soil becomes dry.
-            Do not leave the plant standing in water.
-        </p>
-
-        <h3>Humidity</h3>
-
-        <p>
-            Monstera prefers higher humidity.
-        </p>
-
-        <h3>Temperature</h3>
-
-        <p>
-            Keep the plant in a warm room.
-        </p>
-
-        <hr>
-
-        <h2>Care tips</h2>
-
-        <ul>
-            <li>Water when the soil is dry.</li>
-            <li>Give the plant bright indirect light.</li>
-            <li>Clean the leaves regularly.</li>
-            <li>Rotate the plant from time to time.</li>
-        </ul>
-
-        <hr>
-
-        <h2>Community Q&A</h2>
-
-        <p>
-            Have a question about Monstera?
-        </p>
-
-        <textarea
-            rows="4"
-            cols="50"
-            placeholder="Ask your question..."
-        ></textarea>
-
-        <br><br>
-
-        <button>
-            Ask a question
-        </button>
-
-        <br><br>
-
-        <a href="index.html">
-            ← Back to the garden
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>Leafwise</span>
+            <b>PLANT CARE</b>
         </a>
-
+        <nav class="nav-links">
+            <a href="index.html#garden">The Garden</a>
+            <a href="index.html#add-plant" class="add-button">Add a Plant</a>
+        </nav>
+    </header>
+    <main class="plant-detail">
+        <div class="plant-hero">
+            <img src="pages/monstera.jpg" alt="Monstera">
+        </div>
+        <div class="plant-content">
+            <div class="plant-heading">
+                <div>
+                    <span class="difficulty">EASY</span>
+                    <h1>Monstera</h1>
+                    <p class="scientific-name">Monstera deliciosa</p>
+                </div>
+                <span class="toxicity">Toxic to pets</span>
+            </div>
+            <section class="plant-information">
+                <div>
+                    <span>LIGHT</span>
+                    <p>Bright indirect light</p>
+                </div>
+                <div>
+                    <span>WATER</span>
+                    <p>Every 1–2 weeks</p>
+                </div>
+                <div>
+                    <span>HUMIDITY</span>
+                    <p>50–70%</p>
+                </div>
+                <div>
+                    <span>TEMPERATURE</span>
+                    <p>18–27°C</p>
+                </div>
+            </section>
+            <p class="plant-description">
+                Monstera is a tropical plant with large green leaves.
+                It likes bright indirect light and regular watering.
+                With proper care, its beautiful leaves can grow very large
+                and bring a tropical atmosphere into your home.
+            </p>
+            <section class="care-section">
+                <h2>Care instructions</h2>
+                <div class="care-item">
+                    <h3>Light</h3>
+                    <p>
+                        Place the Monstera in bright indirect light.
+                        Avoid strong direct sunlight.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Water</h3>
+                    <p>
+                        Water when the top layer of soil becomes dry.
+                        Do not leave the plant standing in water.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Humidity</h3>
+                    <p>
+                        Monstera prefers higher humidity.
+                        You can occasionally mist its leaves.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Temperature</h3>
+                    <p>
+                        Keep the plant in a warm room.
+                        Avoid cold drafts and sudden temperature changes.
+                    </p>
+                </div>
+            </section>
+            <section class="tips-section">
+                <h2>Care tips</h2>
+                <ul>
+                    <li>Water when the soil is dry.</li>
+                    <li>Give the plant bright indirect light.</li>
+                    <li>Clean the leaves regularly.</li>
+                    <li>Rotate the plant from time to time.</li>
+                </ul>
+            </section>
+            <section class="community-section">
+                <h2>Community Q&A</h2>
+                <p>
+                    Have a question about Monstera?
+                    Share it with the community.
+                </p>
+                <form class="question-form">
+                    <input
+                        type="text"
+                        placeholder="Your name"
+                        required
+                    >
+                    <textarea
+                        rows="4"
+                        placeholder="Ask your question or share a care tip..."
+                        required
+                    ></textarea>
+                    <button type="submit">
+                        Post comment
+                    </button>
+                </form>
+            </section>
+            <a href="index.html#garden" class="back-link">
+                ← Back to the garden
+            </a>
+        </div>
     </main>
-
-    <hr>
-
     <footer>
-        Leafwise &copy; A community plant care encyclopedia.
+        <p>Leafwise © A community plant care encyclopedia.</p>
     </footer>
-
 </body>
-
 </html>

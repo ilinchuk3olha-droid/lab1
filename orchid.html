@@ -1,127 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orchid - Leafwise</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>Leafwise Plant Care</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">The garden</a> |
-        <a href="add.html">Add a plant</a>
-    </nav>
-
-    <hr>
-
-    <main>
-
-        <h1>Orchid</h1>
-
-        <img
-            src="pages/orchid.jpg"
-            alt="Orchid"
-            width="300"
-        >
-
-        <p>
-            Orchid is a beautiful flowering houseplant.
-            It needs bright indirect light and careful watering to grow well.
-        </p>
-
-        <hr>
-
-        <h2>Plant information</h2>
-
-        <p><strong>Scientific name:</strong> Phalaenopsis</p>
-
-        <p><strong>Difficulty:</strong> Moderate</p>
-
-        <p><strong>Light:</strong> Bright indirect light</p>
-
-        <p><strong>Watering:</strong> Every 1–2 weeks</p>
-
-        <p><strong>Humidity:</strong> 40–70%</p>
-
-        <p><strong>Temperature:</strong> 18–30°C</p>
-
-        <p><strong>Toxicity:</strong> Non-toxic to pets</p>
-
-        <hr>
-
-        <h2>Care instructions</h2>
-
-        <h3>Light</h3>
-
-        <p>
-            Orchid grows best in bright indirect light.
-            Avoid strong direct sunlight.
-        </p>
-
-        <h3>Water</h3>
-
-        <p>
-            Water the orchid when the roots and growing medium become dry.
-            Avoid leaving the roots in standing water.
-        </p>
-
-        <h3>Humidity</h3>
-
-        <p>
-            Orchids prefer moderate to high humidity and good air circulation.
-        </p>
-
-        <h3>Temperature</h3>
-
-        <p>
-            Keep the plant in a warm room and protect it from cold drafts.
-        </p>
-
-        <hr>
-
-        <h2>Care tips</h2>
-
-        <ul>
-            <li>Do not overwater.</li>
-            <li>Provide bright indirect light.</li>
-            <li>Use a special orchid potting mix.</li>
-            <li>Make sure the pot has good drainage.</li>
-            <li>Keep water away from the center of the leaves.</li>
-        </ul>
-
-        <hr>
-
-        <h2>Community Q&A</h2>
-<textarea
-            rows="4"
-            cols="50"
-            placeholder="Ask your question..."
-        ></textarea>
-
-        <br><br>
-
-        <button>
-            Ask a question
-        </button>
-        <br><br>
-
-        <a href="index.html">
-            ← Back to the garden
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>Leafwise</span>
+            <b>PLANT CARE</b>
         </a>
+        <nav class="nav-links">
+            <a href="index.html#garden">The Garden</a>
+            <a href="index.html#add-plant" class="add-button">Add a Plant</a>
+        </nav>
 
+    </header>
+    <main class="plant-detail">
+        <div class="plant-hero">
+            <img src="pages/orchid.jpg" alt="Orchid">
+        </div>
+        <div class="plant-content">
+            <div class="plant-heading">
+                <div>
+                    <span class="difficulty">MODERATE</span>
+                    <h1>Orchid</h1>
+                    <p class="scientific-name">
+                        Phalaenopsis
+                    </p>
+                </div>
+                <span class="toxicity">
+                    Non-toxic to pets
+                </span>
+            </div>
+            <section class="plant-information">
+                <div>
+                    <span>LIGHT</span>
+                    <p>Bright indirect light</p>
+                </div>
+                <div>
+                    <span>WATER</span>
+                    <p>Every 1–2 weeks</p>
+                </div>
+
+                <div>
+                    <span>HUMIDITY</span>
+                    <p>40–70%</p>
+                </div>
+
+                <div>
+                    <span>TEMPERATURE</span>
+                    <p>18–30°C</p>
+                </div>
+            </section>
+            <p class="plant-description">
+                Orchid is a beautiful flowering houseplant.
+                It needs bright indirect light and careful watering
+                to grow well. Its elegant flowers can bring beauty
+                and freshness to any room.
+            </p>
+            <section class="care-section">
+                <h2>Care instructions</h2>
+                <div class="care-item">
+                    <h3>Light</h3>
+                    <p>
+                        Orchid grows best in bright indirect light.
+                        Avoid strong direct sunlight.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Water</h3>
+                    <p>
+                        Water the orchid when the roots and growing
+                        medium become dry. Avoid leaving the roots
+                        in standing water.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Humidity</h3>
+                    <p>
+                        Orchids prefer moderate to high humidity
+                        and good air circulation.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Temperature</h3>
+                    <p>
+                        Keep the plant in a warm room and protect
+                        it from cold drafts.
+                    </p>
+                </div>
+            </section>
+            <section class="tips-section">
+                <h2>Care tips</h2>
+                <ul>
+                    <li>Do not overwater.</li>
+                    <li>Provide bright indirect light.</li>
+                    <li>Use a special orchid potting mix.</li>
+                    <li>Make sure the pot has good drainage.</li>
+                    <li>Keep water away from the center of the leaves.</li>
+                </ul>
+            </section>
+            <section class="community-section">
+                <h2>Community Q&A</h2>
+                <p>
+                    Have a question about Orchid?
+                    Share it with the community.
+                </p>
+                <form class="question-form">
+                    <input
+                        type="text"
+                        placeholder="Your name"
+                        required
+                    >
+                    <textarea
+                        rows="4"
+                        placeholder="Ask your question or share a care tip..."
+                        required
+                    ></textarea>
+                    <button type="submit">
+                        Post comment
+                    </button>
+                </form>
+            </section>
+            <a href="index.html#garden" class="back-link">
+                ← Back to the garden
+            </a>
+        </div>
     </main>
-
-    <hr>
-
     <footer>
-        Leafwise &copy; A community plant care encyclopedia.
+        <p>Leafwise © A community plant care encyclopedia.</p>
     </footer>
-
 </body>
-
 </html>

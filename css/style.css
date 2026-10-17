@@ -1,368 +1,707 @@
-/* =========================
-   ОСНОВНІ НАЛАШТУВАННЯ
-========================= */
-
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background-color: #0b1a10;
-    color: #f5f0df;
+    background: #f5f2ea;
+    color: #19362c;
     font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-/* =========================
-   HEADER
-========================= */
-
-header {
-    height: 80px;
-    background-color: #0b1a10;
-
+.navbar {
+    height: 65px;
+    padding: 0 25px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    padding: 0 50px;
-
-    border-bottom: 1px solid #243528;
+    align-items: center;
+    background: #f5f2ea;
+    border-bottom: 1px solid #e7e2d8;
 }
-
-
-/* Логотип */
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 18px;
+    flex-direction: column;
+    color: #19362c;
+    line-height: 1;
 }
 
 .logo span {
-    color: #d17d47;
-
     font-family: Georgia, serif;
-    font-size: 28px;
-    font-style: italic;
+    font-size: 27px;
+    font-weight: bold;
 }
 
 .logo b {
-    color: #8b9485;
-
-    font-size: 14px;
+    margin-top: 4px;
+    font-size: 8px;
     letter-spacing: 2px;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
+.nav-links {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 25px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-nav a {
-    color: #9ca696;
-
-    text-decoration: none;
-
-    border: 1px solid #304034;
-    border-radius: 30px;
-
-    padding: 12px 22px;
-
-    font-size: 15px;
+.nav-links a:hover {
+    color: #b95e3c;
 }
 
-nav a:hover {
+.add-button {
+    padding: 10px 17px;
+    background: #b95e3c;
     color: white;
-    border-color: #647363;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-
-/* =========================
-   HERO
-========================= */
+.add-button:hover {
+    background: #95472d;
+    color: white !important;
+}
 
 .hero {
-    height: 650px;
-
-    position: relative;
-
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(8, 25, 14, 0.95),
-            rgba(8, 25, 14, 0.70),
-            rgba(8, 25, 14, 0.45)
-        ),
-        url("../pages/background.jpg");
-
-    background-size: cover;
-    background-position: center;
-
+    min-height: 580px;
+    padding: 35px 25px;
     display: flex;
     align-items: center;
 }
 
-
-/* затемнення знизу */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 180px;
-
-    background: linear-gradient(
-        transparent,
-        #0b1a10
-    );
-}
-
-
-/* =========================
-   HERO CONTENT
-========================= */
-
 .hero-content {
     position: relative;
-    z-index: 2;
-
-    margin-left: 50px;
-
-    max-width: 850px;
+    width: 100%;
+    min-height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 52%;
 }
-
-
-/* маленький напис */
 
 .small-title {
-    color: #c97943;
-
-    font-size: 14px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 35px;
+    margin: 0 0 25px;
+    color: #bd603c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-
-
-/* головний текст */
 
 .hero h1 {
-    margin: 0;
-
+    margin: 0 0 25px;
+    color: #19362c;
     font-family: Georgia, serif;
-
-    font-size: 82px;
-
+    font-size: clamp(55px, 6.5vw, 100px);
+    font-weight: bold;
     line-height: 0.95;
-
-    font-weight: normal;
-
-    color: #f5f0df;
+    letter-spacing: -4px;
 }
-
-
-/* слово deserves */
 
 .hero h1 span {
-    color: #d17d47;
-
-    font-style: italic;
+    color: #19362c;
 }
 
+.hero img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
 
-/* опис */
-
-.description {
-    margin-top: 40px;
-
-    width: 650px;
-
-    color: #9db0a0;
-
-    font-size: 18px;
-
+.hero .description {
+    max-width: 620px;
+    margin: 0 0 28px;
+    color: #697c75;
+    font-size: 19px;
     line-height: 1.7;
 }
 
-
-/* головна кнопка */
-
 .main-button {
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding: 20px 38px;
-
-    background-color: #c87943;
-
+    padding: 14px 21px;
+    border: none;
+    border-radius: 6px;
+    background: #b95e3c;
     color: white;
-
-    text-decoration: none;
-
+    font-size: 14px;
     font-weight: bold;
-
-    border-radius: 2px;
-}
-
-.main-button span {
-    margin-left: 20px;
-    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .main-button:hover {
-    background-color: #db8b52;
+    background: #95472d;
 }
 
-
-/* =========================
-   GARDEN
-========================= */
+.main-button span {
+    margin-left: 8px;
+}
 
 .garden {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: 80px auto;
-
-    padding-bottom: 50px;
+    padding: 45px 25px 60px;
+    background: #f5f2ea;
 }
 
 .garden > h2 {
+    margin: 0 0 22px;
     font-family: Georgia, serif;
-
-    font-size: 50px;
-
+    font-size: 38px;
     font-weight: normal;
 }
 
-
-/* пошук */
-
-input {
-    width: 100%;
-
-    padding: 16px;
-
-    background-color: #142419;
-
-    border: 1px solid #344536;
-
-    color: white;
-
+#plantSearch {
+    width: 220px;
+    max-width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #e2ddd3;
     border-radius: 5px;
-
-    font-size: 16px;
+    background: #fffdf8;
+    color: #19362c;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    outline: none;
 }
 
-
-/* кнопки фільтра */
+#plantSearch:focus {
+    border-color: #19362c;
+}
 
 .filters {
-    margin: 25px 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: -34px 0 20px;
 }
 
-.filters button {
-    background-color: transparent;
-
-    color: #b0b9ad;
-
-    border: 1px solid #405044;
-
-    padding: 10px 20px;
-
-    margin-right: 8px;
-
-    border-radius: 20px;
-
+.filter-btn {
+    padding: 8px 13px;
+    border: 1px solid #e2ddd3;
+    border-radius: 5px;
+    background: transparent;
+    color: #52665c;
+    font-size: 11px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-.filters button:hover {
-    background-color: #315c3a;
+.filter-btn:hover {
+    border-color: #19362c;
+}
 
+.filter-btn.active {
+    background: #19362c;
+    border-color: #19362c;
+    color: #ffffff;
+}
+
+.garden > p {
+    margin: 15px 0 20px;
+    color: #78847b;
+    font-size: 12px;
+}
+
+.plant {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(20% - 10px);
+    height: 390px;
+    margin: 0 8px 15px 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #263d30;
     color: white;
 }
 
+.plant:nth-of-type(5) {
+    margin-right: 0;
+}
 
-/* =========================
-   PLANT CARDS
-========================= */
-
-.plant {
-    display: flex;
-
-    gap: 30px;
-
-    padding: 30px 0;
-
-    border-top: 1px solid #2c3a2e;
+.plant[hidden] {
+    display: none;
 }
 
 .plant img {
-    width: 230px;
-    height: 230px;
-
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
-    border-radius: 5px;
+    transition: transform 0.4s;
 }
 
-.plant h2 {
+.plant:hover img {
+    transform: scale(1.04);
+}
+
+.plant::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 31, 23, 0.02) 30%,
+        rgba(15, 31, 23, 0.25) 50%,
+        rgba(15, 31, 23, 0.94) 100%
+    );
+    pointer-events: none;
+}
+
+.plant-info {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 13px;
+}
+
+.plant-info h2 {
+    margin: 0 0 5px;
+    color: white;
     font-family: Georgia, serif;
-
-    font-size: 32px;
-
+    font-size: 22px;
     font-weight: normal;
-
-    color: #f5f0df;
+    line-height: 1.1;
 }
 
-.plant p {
-    color: #9daa9e;
+.plant-info p {
+    margin: 7px 0;
+    color: #e2e7df;
+    font-size: 11px;
+    line-height: 1.5;
+}
 
+.plant-info strong {
+    color: white;
+}
+
+.plant-button {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: white;
+    font-size: 11px;
+    transition: 0.2s;
+}
+
+.plant-button:hover {
+    background: white;
+    color: #19362c;
+}
+
+#noResults {
+    display: block;
+    color: #b95e3c;
+    font-size: 14px;
+}
+
+#noResults[hidden] {
+    display: none;
+}
+
+footer {
+    padding: 22px 25px;
+    border-top: 1px solid #e2ddd3;
+    background: #f5f2ea;
+    color: #78847b;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        min-height: 560px;
+    }
+
+    .plant {
+        height: 420px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .hero-content {
+        min-height: 400px;
+        padding-right: 48%;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 7vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .hero img {
+        width: 43%;
+    }
+
+    .hero .description {
+        font-size: 16px;
+    }
+
+    .garden {
+        padding: 35px 20px;
+    }
+
+    .plant {
+        width: calc(33.333% - 10px);
+        height: 340px;
+        margin-right: 8px;
+    }
+
+    .plant-info h2 {
+        font-size: 19px;
+    }
+
+    .plant:nth-of-type(5) {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo span {
+        font-size: 23px;
+    }
+
+    .logo b {
+        font-size: 7px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 11px;
+    }
+
+    .add-button {
+        padding: 9px 11px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        min-height: auto;
+        padding-right: 0;
+    }
+
+    .small-title {
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 12vw, 68px);
+        line-height: 0.98;
+    }
+
+    .hero .description {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .hero img {
+        position: static;
+        width: 100%;
+        height: 300px;
+        margin-top: 25px;
+    }
+
+    .garden {
+        padding: 30px 15px;
+    }
+
+    .garden > h2 {
+        font-size: 32px;
+    }
+
+    #plantSearch {
+        width: 100%;
+    }
+
+    .filters {
+        justify-content: flex-start;
+        margin: 15px 0;
+    }
+
+    .plant {
+        width: calc(50% - 7px);
+        height: 300px;
+        margin-right: 8px;
+    }
+
+    .plant:nth-of-type(even) {
+        margin-right: 0;
+    }
+
+    .plant-info {
+        padding: 12px 9px;
+    }
+
+    .plant-info h2 {
+        font-size: 18px;
+    }
+
+    .plant-info p {
+        font-size: 10px;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .plant {
+        width: 100%;
+        height: 350px;
+        margin-right: 0;
+    }
+
+    .plant-info h2 {
+        font-size: 22px;
+    }
+}
+
+.add-plant {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 20px 120px;
+    display: block;
+    background: #19362c;
+    color: #f5f2ea;
+}
+
+.add-plant-content {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.add-plant-content .small-title {
+    margin: 0 0 24px;
+    color: #b95e3c;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.add-plant-content h1 {
+    margin: 0 0 20px;
+    color: #fffdf8;
+    font-family: Georgia, serif;
+    font-size: clamp(52px, 6vw, 76px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.add-plant-content h1 span {
+    color: #fffdf8;
+}
+
+.add-plant-content .description {
+    max-width: 600px;
+    margin: 0 0 40px;
+    color: #d7e0d9;
+    font-size: 18px;
     line-height: 1.6;
 }
 
-
-/* кнопки рослин */
-
-.plant button {
-    background-color: #c87943;
-
-    color: white;
-
+.add-plant-form {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 35px;
     border: none;
-
-    padding: 11px 20px;
-
-    cursor: pointer;
+    border-radius: 11px;
+    background: #fffdf8;
 }
 
+.add-plant-form h2 {
+    margin: 0 0 8px;
+    color: #19362c;
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: normal;
+}
 
-/* =========================
-   FOOTER
-========================= */
+.form-description {
+    margin: 0 0 25px;
+    color: #78847b;
+    font-size: 12px;
+}
 
-footer {
-    background-color: #07140b;
+.add-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
 
+.add-form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.add-form-group label {
+    color: #52665c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.add-form-group input,
+.add-form-group select,
+.add-form-group textarea {
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 15px;
+    border: 1px solid #d9ddd4;
+    border-radius: 11px;
+    outline: none;
+    background: #fffdf8;
+    color: #19362c;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.add-form-group input::placeholder,
+.add-form-group textarea::placeholder {
+    color: #8b9a98;
+    opacity: 1;
+}
+
+.add-form-group textarea {
+    min-height: 116px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.add-form-group input:focus,
+.add-form-group select:focus,
+.add-form-group textarea:focus {
+    border-color: #788f82;
+    box-shadow: 0 0 0 2px rgba(25, 54, 44, 0.08);
+}
+
+.add-form-group input[type="file"] {
+    min-height: auto;
+    padding: 12px;
+    background: #f5f2ea;
+}
+
+#photoPreview {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#photoPreview[hidden] {
+    display: none;
+}
+
+.submit-plant {
+    width: 100%;
+    min-height: 60px;
+    padding: 14px;
+    border: none;
+    border-radius: 11px;
+    background: #cda99b;
+    color: #fffdf8;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-plant:hover {
+    background: #b95e3c;
+}
+
+#formMessage {
+    margin: 12px 0 0;
+    color: #19362c;
+    font-size: 12px;
     text-align: center;
+}
 
-    padding: 30px;
+@media (max-width: 800px) {
+    .add-plant {
+        padding: 35px 20px 70px;
+    }
 
-    color: #7d897d;
+    .add-plant-content h1 {
+        font-size: clamp(46px, 10vw, 60px);
+    }
+
+    .add-plant-content .description {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .add-plant-form {
+        padding: 25px 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .add-plant {
+        padding: 30px 15px 55px;
+    }
+
+    .add-plant-form {
+        padding: 22px 16px;
+        border-radius: 9px;
+    }
+
+    .add-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .add-form-group input,
+    .add-form-group select,
+    .add-form-group textarea {
+        font-size: 15px;
+    }
 }

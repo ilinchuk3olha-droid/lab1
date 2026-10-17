@@ -1,135 +1,136 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Snake Plant - Leafwise</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 
 <body>
+    <header class="navbar">
 
-    <header>
-        <h1>Leafwise Plant Care</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">The garden</a> |
-        <a href="add.html">Add a plant</a>
-    </nav>
-
-    <hr>
-
-    <main>
-
-        <h1>Snake Plant</h1>
-
-        <img
-            src="pages/snakeplant.jpg"
-            alt="Snake Plant"
-            width="300"
-        >
-
-        <p>
-            Snake Plant is an easy-care houseplant with tall green leaves.
-            It can tolerate low light and does not need frequent watering.
-        </p>
-
-        <hr>
-
-        <h2>Plant information</h2>
-
-        <p><strong>Scientific name:</strong> Dracaena trifasciata</p>
-
-        <p><strong>Difficulty:</strong> Easy</p>
-
-        <p><strong>Light:</strong> Low to bright indirect light</p>
-
-        <p><strong>Watering:</strong> Every 2–3 weeks</p>
-
-        <p><strong>Humidity:</strong> 30–50%</p>
-
-        <p><strong>Temperature:</strong> 15–30°C</p>
-
-        <p><strong>Toxicity:</strong> Toxic to pets</p>
-
-        <hr>
-
-        <h2>Care instructions</h2>
-
-        <h3>Light</h3>
-
-        <p>
-            Place the Snake Plant in low to bright indirect light.
-            Avoid strong direct sunlight for long periods.
-        </p>
-
-        <h3>Water</h3>
-
-        <p>
-            Water the plant when the soil is completely dry.
-            Avoid overwatering because it can cause root problems.
-        </p>
-
-        <h3>Humidity</h3>
-
-        <p>
-            Snake Plant does not require high humidity and can grow well
-            in normal indoor conditions.
-        </p>
-
-        <h3>Temperature</h3>
-
-        <p>
-            Keep the plant in a warm room and protect it from very cold
-            temperatures and drafts.
-        </p>
-
-        <hr>
-
-        <h2>Care tips</h2>
-
-        <ul>
-            <li>Allow the soil to dry completely between watering.</li>
-            <li>Give the plant indirect light.</li>
-            <li>Do not leave water in the pot or saucer.</li>
-            <li>Clean the leaves regularly.</li>
-        </ul>
-
-        <hr>
-
-        <h2>Community Q&A</h2>
-
-        <p>
-            Have a question about Snake Plant?
-        </p>
-
-        <textarea
-            rows="4"
-            cols="50"
-            placeholder="Ask your question..."
-        ></textarea>
-
-        <br><br>
-
-        <button>
-            Ask a question
-        </button>
-
-        <br><br>
-
-        <a href="index.html">
-            ← Back to the garden
+        <a href="index.html" class="logo">
+            <span>Leafwise</span>
+            <b>PLANT CARE</b>
         </a>
 
+        <nav class="nav-links">
+            <a href="index.html#garden">The Garden</a>
+            <a href="index.html#add-plant" class="add-button">Add a Plant</a>
+        </nav>
+
+    </header>
+    <main class="plant-detail">
+        <div class="plant-hero">
+            <img src="pages/snakeplant.jpg" alt="Snake Plant">
+        </div>
+        <div class="plant-content">            <!-- TITLE -->
+            <div class="plant-heading">
+                <div>
+                    <span class="difficulty">EASY</span>
+                    <h1>Snake Plant</h1>
+                    <p class="scientific-name">
+                        Dracaena trifasciata
+                    </p>
+                </div>
+                <span class="toxicity">
+                    Toxic to pets
+                </span>
+            </div>
+            <section class="plant-information">
+                <div>
+                    <span>LIGHT</span>
+                    <p>Low to bright indirect light</p>
+                </div>
+                <div>
+                    <span>WATER</span>
+                    <p>Every 2–3 weeks</p>
+                </div>
+                <div>
+                    <span>HUMIDITY</span>
+                    <p>30–50%</p>
+                </div>
+                <div>
+                    <span>TEMPERATURE</span>
+                    <p>15–30°C</p>
+                </div>
+            </section>
+            <p class="plant-description">
+                Snake Plant is an easy-care houseplant with tall green leaves.
+                It can tolerate low light and does not need frequent watering.
+                It is a great choice for people who want an easy-care plant.
+            </p>
+            <section class="care-section">
+                <h2>Care instructions</h2>
+                <div class="care-item">
+                    <h3>Light</h3>
+                    <p>
+                        Place the Snake Plant in low to bright indirect light.
+                        Avoid strong direct sunlight for long periods.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Water</h3>
+                    <p>
+                        Water the plant when the soil is completely dry.
+                        Avoid overwatering because it can cause root problems.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Humidity</h3>
+                    <p>
+                        Snake Plant does not require high humidity and can
+                        grow well in normal indoor conditions.
+                    </p>
+                </div>
+                <div class="care-item">
+                    <h3>Temperature</h3>
+                    <p>
+                        Keep the plant in a warm room and protect it from
+                        very cold temperatures and drafts.
+                    </p>
+                </div>
+            </section>
+            <section class="tips-section">
+                <h2>Care tips</h2>
+                <ul>
+                    <li>Allow the soil to dry completely between watering.</li>
+                    <li>Give the plant indirect light.</li>
+                    <li>Do not leave water in the pot or saucer.</li>
+                    <li>Clean the leaves regularly.</li>
+                </ul>
+            </section>
+            <section class="community-section">
+                <h2>Community Q&A</h2>
+                <p>
+                    Have a question about Snake Plant?
+                    Share it with the community.
+                </p>
+                <form class="question-form">
+                    <input
+                        type="text"
+                        placeholder="Your name"
+                        required
+                    >
+                    <textarea
+                        rows="4"
+                        placeholder="Ask your question or share a care tip..."
+                        required
+                    ></textarea>
+                    <button type="submit">
+                        Post comment
+                    </button>
+                </form>
+            </section>
+            <a href="index.html#garden" class="back-link">
+                ← Back to the garden
+            </a>
+        </div>
     </main>
-
-    <hr>
-
     <footer>
-        Leafwise &copy; A community plant care encyclopedia.
+        <p>Leafwise © A community plant care encyclopedia.</p>
     </footer>
-
 </body>
-
 </html>

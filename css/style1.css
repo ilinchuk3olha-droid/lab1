@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    background: #f5f2ea;
+    color: #19362c;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background: #f5f2ea;
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #19362c;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo b {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #19362c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-links .add-button {
+    background: #b95e3c;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 6px;
+}
+
+.nav-links .add-button:hover {
+    background: #95472d;
+}
+
+
+
+.plant-detail {
+    max-width: 850px;
+    margin: 45px auto;
+    background: #fffefa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(25, 54, 44, 0.07);
+}
+
+
+
+.plant-hero {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.plant-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.plant-content {
+    padding: 35px 45px;
+}
+
+.plant-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.difficulty {
+    display: inline-block;
+    background: #e3eee5;
+    color: #426b4d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.plant-heading h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin: 10px 0 3px;
+    color: #19362c;
+}
+
+.scientific-name {
+    color: #78847b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    margin: 0;
+}
+
+.toxicity {
+    border: 1px solid #e8e2d7;
+    border-radius: 20px;
+    padding: 7px 12px;
+    color: #78847b;
+    font-size: 11px;
+}
+
+
+
+.plant-information {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: #f3f0e8;
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+.plant-information span {
+    display: block;
+    color: #78847b;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.plant-information p {
+    font-size: 13px;
+    margin: 0;
+    color: #19362c;
+}
+
+
+
+.plant-description {
+    color: #59685f;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.care-section,
+.tips-section,
+.community-section {
+    border-top: 1px solid #e8e3d9;
+    padding-top: 25px;
+    margin-top: 25px;
+}
+
+.plant-content h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 0 0 22px;
+    color: #19362c;
+}
+
+.care-item {
+    margin-bottom: 22px;
+}
+
+.care-item h3 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.care-item p {
+    color: #697c75;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.tips-section ul {
+    padding-left: 20px;
+}
+.tips-section li {
+    color: #59685f;
+    font-size: 14px;
+    line-height: 2.2;
+    padding-left: 5px;
+}
+
+.community-section > p {
+    color: #697c75;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.question-form input,
+.question-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #e5e0d5;
+    border-radius: 7px;
+    background: #faf8f2;
+    color: #19362c;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.question-form input:focus,
+.question-form textarea:focus {
+    border-color: #788f7b;
+}
+.question-form textarea {
+    resize: vertical;
+}
+.question-form button {
+    align-self: flex-start;
+    background: #b95e3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.question-form button:hover {
+    background: #95472d;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #b95e3c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #78847b;
+    font-size: 12px;
+}
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+    .plant-detail {
+        margin: 20px 12px;
+    }
+
+    .plant-hero {
+        height: 230px;
+    }
+
+    .plant-content {
+        padding: 25px 20px;
+    }
+
+    .plant-heading h1 {
+        font-size: 36px;
+    }
+
+    .plant-information {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toxicity {
+        font-size: 9px;
+    }
+
+}
