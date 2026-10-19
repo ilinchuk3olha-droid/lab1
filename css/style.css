@@ -1,17 +1,67 @@
+
+:root {
+    --color-bg: #f5f2ea;
+    --color-dark: #19362c;
+    --color-accent: #b95e3c;
+    --color-accent-hover: #95472d;
+    --color-white: #ffffff;
+    --color-light: #fffdf8;
+    --color-text: #52665c;
+    --color-muted: #78847b;
+    --color-description: #697c75;
+    --color-border: #e2ddd3;
+    --color-border-light: #e7e2d8;
+    --color-input-border: #d9ddd4;
+    --color-placeholder: #8b9a98;
+    --color-light-text: #d7e0d9;
+
+    --font-main: Arial, sans-serif;
+    --font-heading: Georgia, serif;
+
+    --font-size-small: 8px;
+    --font-size-xs: 10px;
+    --font-size-sm: 11px;
+    --font-size-normal: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 22px;
+    --font-size-title: 38px;
+
+    --radius-small: 4px;
+    --radius-normal: 5px;
+    --radius-medium: 6px;
+    --radius-large: 9px;
+    --radius-form: 11px;
+
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 25px;
+    --spacing-2xl: 35px;
+
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.4s;
+
+    --container-width: 1024px;
+    --navbar-height: 65px;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
 body {
     margin: 0;
-    background: #f5f2ea;
-    color: #19362c;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    background: var(--color-bg);
+    color: var(--color-dark);
+    font-family: var(--font-main);
+    font-size: var(--font-size-normal);
 }
 
 a {
@@ -20,62 +70,69 @@ a {
 }
 
 .navbar {
-    height: 65px;
-    padding: 0 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--navbar-height);
+    padding: 0 var(--spacing-xl);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f5f2ea;
-    border-bottom: 1px solid #e7e2d8;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 .logo {
     display: flex;
     flex-direction: column;
-    color: #19362c;
+    color: var(--color-dark);
     line-height: 1;
 }
 
 .logo span {
-    font-family: Georgia, serif;
+    font-family: var(--font-heading);
     font-size: 27px;
     font-weight: bold;
 }
 
 .logo b {
     margin-top: 4px;
-    font-size: 8px;
+    font-size: var(--font-size-small);
     letter-spacing: 2px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: var(--spacing-xl);
     font-size: 12px;
     font-weight: bold;
 }
 
+.nav-links a {
+    transition: color var(--transition-fast);
+}
+
 .nav-links a:hover {
-    color: #b95e3c;
+    color: var(--color-accent);
 }
 
 .add-button {
-    padding: 10px 17px;
-    background: #b95e3c;
-    color: white;
-    border-radius: 5px;
-    transition: 0.3s;
+    padding: var(--spacing-sm) 17px;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-radius: var(--radius-normal);
+    transition: background var(--transition-normal);
 }
 
 .add-button:hover {
-    background: #95472d;
-    color: white !important;
+    background: var(--color-accent-hover);
+    color: var(--color-white) !important;
 }
 
 .hero {
     min-height: 580px;
-    padding: 35px 25px;
+    padding: var(--spacing-2xl) var(--spacing-xl);
     display: flex;
     align-items: center;
 }
@@ -92,7 +149,7 @@ a {
 }
 
 .small-title {
-    margin: 0 0 25px;
+    margin: 0 0 var(--spacing-xl);
     color: #bd603c;
     font-size: 13px;
     font-weight: bold;
@@ -101,9 +158,9 @@ a {
 }
 
 .hero h1 {
-    margin: 0 0 25px;
-    color: #19362c;
-    font-family: Georgia, serif;
+    margin: 0 0 var(--spacing-xl);
+    color: var(--color-dark);
+    font-family: var(--font-heading);
     font-size: clamp(55px, 6.5vw, 100px);
     font-weight: bold;
     line-height: 0.95;
@@ -111,7 +168,7 @@ a {
 }
 
 .hero h1 span {
-    color: #19362c;
+    color: var(--color-dark);
 }
 
 .hero img {
@@ -121,13 +178,13 @@ a {
     width: 42%;
     height: 100%;
     object-fit: cover;
-    border-radius: 9px;
+    border-radius: var(--radius-large);
 }
 
 .hero .description {
     max-width: 620px;
     margin: 0 0 28px;
-    color: #697c75;
+    color: var(--color-description);
     font-size: 19px;
     line-height: 1.7;
 }
@@ -135,17 +192,17 @@ a {
 .main-button {
     padding: 14px 21px;
     border: none;
-    border-radius: 6px;
-    background: #b95e3c;
-    color: white;
-    font-size: 14px;
+    border-radius: var(--radius-medium);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: var(--font-size-normal);
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background var(--transition-normal);
 }
 
 .main-button:hover {
-    background: #95472d;
+    background: var(--color-accent-hover);
 }
 
 .main-button span {
@@ -153,14 +210,14 @@ a {
 }
 
 .garden {
-    padding: 45px 25px 60px;
-    background: #f5f2ea;
+    padding: 45px var(--spacing-xl) 60px;
+    background: var(--color-bg);
 }
 
 .garden > h2 {
     margin: 0 0 22px;
-    font-family: Georgia, serif;
-    font-size: 38px;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-title);
     font-weight: normal;
 }
 
@@ -168,17 +225,17 @@ a {
     width: 220px;
     max-width: 100%;
     padding: 11px 13px;
-    border: 1px solid #e2ddd3;
-    border-radius: 5px;
-    background: #fffdf8;
-    color: #19362c;
-    font-family: Arial, sans-serif;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-normal);
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-family: var(--font-main);
     font-size: 12px;
     outline: none;
 }
 
 #plantSearch:focus {
-    border-color: #19362c;
+    border-color: var(--color-dark);
 }
 
 .filters {
@@ -186,33 +243,33 @@ a {
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 7px;
-    margin: -34px 0 20px;
+    margin: -34px 0 var(--spacing-lg);
 }
 
 .filter-btn {
     padding: 8px 13px;
-    border: 1px solid #e2ddd3;
-    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-normal);
     background: transparent;
-    color: #52665c;
-    font-size: 11px;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all var(--transition-fast);
 }
 
 .filter-btn:hover {
-    border-color: #19362c;
+    border-color: var(--color-dark);
 }
 
 .filter-btn.active {
-    background: #19362c;
-    border-color: #19362c;
-    color: #ffffff;
+    background: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 .garden > p {
-    margin: 15px 0 20px;
-    color: #78847b;
+    margin: var(--spacing-md) 0 var(--spacing-lg);
+    color: var(--color-muted);
     font-size: 12px;
 }
 
@@ -222,11 +279,12 @@ a {
     vertical-align: top;
     width: calc(20% - 10px);
     height: 390px;
-    margin: 0 8px 15px 0;
+    margin: 0 8px var(--spacing-md) 0;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: var(--radius-normal);
     background: #263d30;
-    color: white;
+    color: var(--color-white);
+    transition: transform var(--transition-normal);
 }
 
 .plant:nth-of-type(5) {
@@ -242,11 +300,15 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s;
+    transition: transform var(--transition-slow);
 }
 
 .plant:hover img {
     transform: scale(1.04);
+}
+
+.plant:hover {
+    transform: scaleX(1.5);
 }
 
 .plant::after {
@@ -275,10 +337,10 @@ a {
 }
 
 .plant-info h2 {
-    margin: 0 0 5px;
-    color: white;
-    font-family: Georgia, serif;
-    font-size: 22px;
+    margin: 0 0 var(--spacing-xs);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-large);
     font-weight: normal;
     line-height: 1.1;
 }
@@ -286,34 +348,34 @@ a {
 .plant-info p {
     margin: 7px 0;
     color: #e2e7df;
-    font-size: 11px;
+    font-size: var(--font-size-xs);
     line-height: 1.5;
 }
 
 .plant-info strong {
-    color: white;
+    color: var(--color-white);
 }
 
 .plant-button {
     display: inline-block;
     margin-top: 7px;
-    padding: 7px 10px;
+    padding: 7px var(--spacing-sm);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    color: white;
-    font-size: 11px;
-    transition: 0.2s;
+    border-radius: var(--radius-small);
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    transition: all var(--transition-fast);
 }
 
 .plant-button:hover {
-    background: white;
-    color: #19362c;
+    background: var(--color-white);
+    color: var(--color-dark);
 }
 
 #noResults {
     display: block;
-    color: #b95e3c;
-    font-size: 14px;
+    color: var(--color-accent);
+    font-size: var(--font-size-normal);
 }
 
 #noResults[hidden] {
@@ -321,10 +383,10 @@ a {
 }
 
 footer {
-    padding: 22px 25px;
-    border-top: 1px solid #e2ddd3;
-    background: #f5f2ea;
-    color: #78847b;
+    padding: 22px var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-muted);
     font-size: 12px;
     text-align: center;
 }
@@ -333,238 +395,71 @@ footer p {
     margin: 0;
 }
 
-@media (min-width: 1200px) {
-    .hero {
-        min-height: 620px;
-    }
-
-    .hero-content {
-        min-height: 560px;
-    }
-
-    .plant {
-        height: 420px;
-    }
-}
-
-@media (max-width: 900px) {
-    .hero {
-        min-height: auto;
-        padding: 30px 20px;
-    }
-
-    .hero-content {
-        min-height: 400px;
-        padding-right: 48%;
-    }
-
-    .hero h1 {
-        font-size: clamp(45px, 7vw, 65px);
-        letter-spacing: -2px;
-    }
-
-    .hero img {
-        width: 43%;
-    }
-
-    .hero .description {
-        font-size: 16px;
-    }
-
-    .garden {
-        padding: 35px 20px;
-    }
-
-    .plant {
-        width: calc(33.333% - 10px);
-        height: 340px;
-        margin-right: 8px;
-    }
-
-    .plant-info h2 {
-        font-size: 19px;
-    }
-
-    .plant:nth-of-type(5) {
-        margin-right: 8px;
-    }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        height: 60px;
-        padding: 0 15px;
-    }
-
-    .logo span {
-        font-size: 23px;
-    }
-
-    .logo b {
-        font-size: 7px;
-    }
-
-    .nav-links {
-        gap: 12px;
-        font-size: 11px;
-    }
-
-    .add-button {
-        padding: 9px 11px;
-    }
-
-    .hero {
-        padding: 30px 15px;
-    }
-
-    .hero-content {
-        min-height: auto;
-        padding-right: 0;
-    }
-
-    .small-title {
-        margin-bottom: 18px;
-        font-size: 11px;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 12vw, 68px);
-        line-height: 0.98;
-    }
-
-    .hero .description {
-        margin-bottom: 20px;
-        font-size: 15px;
-    }
-
-    .hero img {
-        position: static;
-        width: 100%;
-        height: 300px;
-        margin-top: 25px;
-    }
-
-    .garden {
-        padding: 30px 15px;
-    }
-
-    .garden > h2 {
-        font-size: 32px;
-    }
-
-    #plantSearch {
-        width: 100%;
-    }
-
-    .filters {
-        justify-content: flex-start;
-        margin: 15px 0;
-    }
-
-    .plant {
-        width: calc(50% - 7px);
-        height: 300px;
-        margin-right: 8px;
-    }
-
-    .plant:nth-of-type(even) {
-        margin-right: 0;
-    }
-
-    .plant-info {
-        padding: 12px 9px;
-    }
-
-    .plant-info h2 {
-        font-size: 18px;
-    }
-
-    .plant-info p {
-        font-size: 10px;
-    }
-
-    footer {
-        padding: 20px 12px;
-    }
-}
-
-@media (max-width: 360px) {
-    .plant {
-        width: 100%;
-        height: 350px;
-        margin-right: 0;
-    }
-
-    .plant-info h2 {
-        font-size: 22px;
-    }
-}
-
 .add-plant {
     width: 100%;
     min-height: 100vh;
-    padding: 35px 20px 120px;
+    padding: var(--spacing-2xl) var(--spacing-lg) 120px;
     display: block;
-    background: #19362c;
-    color: #f5f2ea;
+    background: var(--color-dark);
+    color: var(--color-bg);
 }
 
 .add-plant-content {
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0;
 }
 
 .add-plant-content .small-title {
     margin: 0 0 24px;
-    color: #b95e3c;
+    color: var(--color-accent);
     font-size: 15px;
     letter-spacing: 2px;
 }
 
 .add-plant-content h1 {
-    margin: 0 0 20px;
-    color: #fffdf8;
-    font-family: Georgia, serif;
+    margin: 0 0 var(--spacing-lg);
+    color: var(--color-light);
+    font-family: var(--font-heading);
     font-size: clamp(52px, 6vw, 76px);
     line-height: 1;
     letter-spacing: -2px;
 }
 
 .add-plant-content h1 span {
-    color: #fffdf8;
+    color: var(--color-light);
 }
 
 .add-plant-content .description {
     max-width: 600px;
     margin: 0 0 40px;
-    color: #d7e0d9;
-    font-size: 18px;
+    color: var(--color-light-text);
+    font-size: var(--font-size-medium);
     line-height: 1.6;
 }
 
 .add-plant-form {
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 35px;
+    padding: var(--spacing-2xl);
     border: none;
-    border-radius: 11px;
-    background: #fffdf8;
+    border-radius: var(--radius-form);
+    background: var(--color-light);
 }
 
 .add-plant-form h2 {
     margin: 0 0 8px;
-    color: #19362c;
-    font-family: Georgia, serif;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
     font-size: 29px;
     font-weight: normal;
 }
 
 .form-description {
     margin: 0 0 25px;
-    color: #78847b;
+    color: var(--color-muted);
     font-size: 12px;
 }
 
@@ -578,13 +473,13 @@ footer p {
     display: flex;
     min-width: 0;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--spacing-sm);
     margin-bottom: 22px;
 }
 
 .add-form-group label {
-    color: #52665c;
-    font-size: 14px;
+    color: var(--color-text);
+    font-size: var(--font-size-normal);
     font-weight: 600;
 }
 
@@ -593,20 +488,20 @@ footer p {
 .add-form-group textarea {
     width: 100%;
     min-height: 56px;
-    padding: 14px 15px;
-    border: 1px solid #d9ddd4;
-    border-radius: 11px;
+    padding: 14px var(--spacing-md);
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--radius-form);
     outline: none;
-    background: #fffdf8;
-    color: #19362c;
-    font-family: Arial, sans-serif;
+    background: var(--color-light);
+    color: var(--color-dark);
+    font-family: var(--font-main);
     font-size: 17px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .add-form-group input::placeholder,
 .add-form-group textarea::placeholder {
-    color: #8b9a98;
+    color: var(--color-placeholder);
     opacity: 1;
 }
 
@@ -626,7 +521,7 @@ footer p {
 .add-form-group input[type="file"] {
     min-height: auto;
     padding: 12px;
-    background: #f5f2ea;
+    background: var(--color-bg);
 }
 
 #photoPreview {
@@ -645,73 +540,22 @@ footer p {
     min-height: 60px;
     padding: 14px;
     border: none;
-    border-radius: 11px;
+    border-radius: var(--radius-form);
     background: #cda99b;
-    color: #fffdf8;
-    font-size: 18px;
+    color: var(--color-light);
+    font-size: var(--font-size-medium);
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background var(--transition-normal);
 }
 
 .submit-plant:hover {
-    background: #b95e3c;
+    background: var(--color-accent);
 }
 
 #formMessage {
     margin: 12px 0 0;
-    color: #19362c;
+    color: var(--color-dark);
     font-size: 12px;
     text-align: center;
-}
-
-@media (max-width: 800px) {
-    .add-plant {
-        padding: 35px 20px 70px;
-    }
-
-    .add-plant-content h1 {
-        font-size: clamp(46px, 10vw, 60px);
-    }
-
-    .add-plant-content .description {
-        margin-bottom: 30px;
-        font-size: 16px;
-    }
-
-    .add-plant-form {
-        padding: 25px 22px;
-    }
-}
-
-@media (max-width: 500px) {
-    .add-plant {
-        padding: 30px 15px 55px;
-    }
-
-    .add-plant-form {
-        padding: 22px 16px;
-        border-radius: 9px;
-    }
-
-    .add-form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .add-form-group input,
-    .add-form-group select,
-    .add-form-group textarea {
-        font-size: 15px;
-    }
-}
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 20px;
-}
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
