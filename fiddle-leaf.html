@@ -1,129 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Snake Plant - Leafwise</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiddle Leaf Fig - Leafwise</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Leafwise Plant Care</h1>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>Leafwise</span>
+            <b>PLANT CARE</b>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">The Garden</a>
+            <a href="add.html" class="add-button">Add a Plant</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="index.html">The garden</a> |
-        <a href="add.html">Add a plant</a>
-    </nav>
+    <main class="plant-detail">
 
-    <hr>
+        <div class="plant-hero">
+            <img src="pages/leaf.jpg" alt="Fiddle Leaf Fig">
+        </div>
 
-    <main>
+        <div class="plant-content">
 
-        <h1>Snake Plant</h1>
+            <div class="plant-heading">
+                <div>
+                    <span class="difficulty">Medium</span>
+                    <h1>Fiddle Leaf Fig</h1>
+                    <p class="scientific-name">Ficus lyrata</p>
+                </div>
 
-        <img
-            src="pages/leaf.jpg"
-            alt="Fiddle-leaf"
-            width="300"
-        >
+                <span class="toxicity">Toxic to pets</span>
+            </div>
 
-        <p>
-           Fiddle Leaf Fig is a popular houseplant with large, violin-shaped leaves. 
-           It can grow into a tall indoor tree and needs consistent care.
-        </p>
+            <p class="plant-description">
+                Fiddle Leaf Fig is a popular houseplant with large,
+                violin-shaped leaves. It can grow into a tall indoor
+                tree and needs consistent care.
+            </p>
 
-        <hr>
+            <div class="plant-information">
 
-        <h2>Plant information</h2>
+                <div>
+                    <span>LIGHT</span>
+                    <p>Bright indirect light</p>
+                </div>
 
-        <p><strong>Scientific name:</strong> Ficus lyrata</p>
+                <div>
+                    <span>WATERING</span>
+                    <p>Every 1–2 weeks</p>
+                </div>
 
-        <p><strong>Difficulty:</strong> Medium</p>
+                <div>
+                    <span>HUMIDITY</span>
+                    <p>40–60%</p>
+                </div>
 
-        <p><strong>Light:</strong> Bright indirect light</p>
+                <div>
+                    <span>TEMPERATURE</span>
+                    <p>18–30°C</p>
+                </div>
 
-        <p><strong>Watering:</strong> Every 1–2 weeks</p>
+            </div>
 
-        <p><strong>Humidity:</strong> 40–60%</p>
+            <section class="care-section">
 
-        <p><strong>Temperature:</strong> 18–30°C</p>
+                <h2>Care instructions</h2>
 
-        <p><strong>Toxicity:</strong> Toxic to pets</p>
+                <div class="care-item">
+                    <h3>Light</h3>
+                    <p>
+                        Fiddle Leaf Fig grows best in bright indirect
+                        light. Avoid sudden changes in lighting.
+                    </p>
+                </div>
 
-        <hr>
+                <div class="care-item">
+                    <h3>Water</h3>
+                    <p>
+                        Water when the top few centimeters of soil
+                        become dry. Avoid keeping the soil constantly wet.
+                    </p>
+                </div>
 
-        <h2>Care instructions</h2>
+                <div class="care-item">
+                    <h3>Humidity</h3>
+                    <p>
+                        Normal room humidity is enough, but the plant
+                        prefers moderate humidity.
+                    </p>
+                </div>
 
-        <h3>Light</h3>
+                <div class="care-item">
+                    <h3>Temperature</h3>
+                    <p>
+                        Keep the plant in a warm room and protect it
+                        from cold drafts and sudden temperature changes.
+                    </p>
+                </div>
 
-        <p>
-            Fiddle Leaf Fig grows best in bright indirect light. 
-            Avoid sudden changes in lighting.
-        </p>
+            </section>
 
-        <h3>Water</h3>
+            <section class="tips-section">
 
-        <p>
-           Water when the top few centimeters of soil become dry. 
-           Avoid keeping the soil constantly wet.
-        </p>
+                <h2>Care tips</h2>
 
-        <h3>Humidity</h3>
+                <ul>
+                    <li>Do not overwater.</li>
+                    <li>Provide bright indirect light.</li>
+                    <li>Keep the plant away from cold drafts.</li>
+                    <li>Clean the large leaves regularly.</li>
+                    <li>Use well-draining soil.</li>
+                </ul>
 
-        <p>
-            Normal room humidity is enough.
-        </p>
+            </section>
 
-        <h3>Temperature</h3>
+            <section class="community-section">
 
-        <p>
-            Keep the plant in a warm room and protect it from cold drafts and sudden temperature changes.
-        </p>
+                <h2>Ask a question</h2>
 
-        <hr>
+                <p>
+                    Have a question about Fiddle Leaf Fig?
+                    Ask our community!
+                </p>
 
-        <h2>Care tips</h2>
+                <form class="question-form">
 
-        <ul>
-            <li>Do not overwater.</li>
-            <li>Provide bright indirect light.</li>
-            <li>Keep the plant away from cold drafts.</li>
-            <li>Clean the large leaves regularly.</li>
-            <li>Use well-draining soil.</li>
-        </ul>
+                    <textarea
+                        rows="4"
+                        placeholder="Ask your question..."
+                    ></textarea>
 
-        <hr>
-<textarea
-            rows="4"
-            cols="50"
-            placeholder="Ask your question..."
-        ></textarea>
+                    <button type="button">
+                        Ask a question
+                    </button>
 
-        <br><br>
+                </form>
 
-        <button>
-            Ask a question
-        </button>
+                <h2>Community Q&A</h2>
 
-        <br><br>
+                <a href="index.html" class="back-link">
+                    ← Back to the garden
+                </a>
 
-        <h2>Community Q&A</h2>
-        <br><br>
-        <a href="index.html">
-            ← Back to the garden
-        </a>
+            </section>
+
+        </div>
 
     </main>
 
-    <hr>
-
     <footer>
-        Leafwise &copy; A community plant care encyclopedia.
+        <p>Leafwise © A community plant care encyclopedia.</p>
     </footer>
 
 </body>
-
 </html>
