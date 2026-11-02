@@ -330,3 +330,25 @@ footer {
     font-size: 12px;
     text-align: center;
 }
+
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--colour-accent);
+    border-radius: 50%;
+    background: var(--colour-accent);
+    color: var(--colour-white);
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+    background: var(--colour-accent-hover);
+    transform: translateY(-4px);
+}
