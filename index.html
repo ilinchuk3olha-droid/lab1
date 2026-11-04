@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -269,7 +268,7 @@
                         <option value="Partial shade">Partial shade</option>
                     </select>
                 </div>
-                
+
             </div>
 
             <div class="add-form-row">
@@ -460,144 +459,6 @@
             Leafwise © A community plant care encyclopedia.
         </p>
     </footer>
-
-    <script>
-        const searchInput = document.getElementById("plantSearch");
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const plants = document.querySelectorAll(".plant");
-        const noResults = document.getElementById("noResults");
-
-        let currentFilter = "all";
-
-        function filterPlants() {
-            const searchText = searchInput.value.toLowerCase().trim();
-            let visiblePlants = 0;
-
-            plants.forEach(function (plant) {
-                const name = plant.dataset.name;
-                const difficulty = plant.dataset.difficulty;
-                const text = plant.textContent.toLowerCase();
-
-                const matchesSearch =
-                    name.includes(searchText) ||
-                    text.includes(searchText);
-
-                const matchesFilter =
-                    currentFilter === "all" ||
-                    difficulty === currentFilter;
-
-                if (matchesSearch && matchesFilter) {
-                    plant.hidden = false;
-                    visiblePlants++;
-                } else {
-                    plant.hidden = true;
-                }
-            });
-
-            noResults.hidden = visiblePlants !== 0;
-        }
-
-        searchInput.addEventListener("input", filterPlants);
-
-        filterButtons.forEach(function (button) {
-            button.addEventListener("click", function () {
-                currentFilter = button.dataset.filter;
-
-                filterButtons.forEach(function (btn) {
-                    btn.classList.remove("active");
-                });
-
-                button.classList.add("active");
-
-                filterPlants();
-            });
-        });
-
-        const plantPhoto = document.getElementById("plantPhoto");
-        const photoPreview = document.getElementById("photoPreview");
-
-        plantPhoto.addEventListener("change", function () {
-            const file = plantPhoto.files[0];
-
-            if (file) {
-                photoPreview.src = URL.createObjectURL(file);
-                photoPreview.hidden = false;
-            } else {
-                photoPreview.hidden = true;
-            }
-        });
-
-        const plantForm = document.getElementById("plantForm");
-
-        plantForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const plantName = document.getElementById("plantName").value;
-
-            alert("Thank you! " + plantName + " has been submitted.");
-
-            plantForm.reset();
-            photoPreview.hidden = true;
-        });
-
-        const reviewForm = document.getElementById("reviewForm");
-
-        reviewForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const name = document.getElementById("reviewName").value.trim();
-            const role = document.getElementById("reviewRole").value.trim();
-            const comment = document.getElementById("reviewComment").value.trim();
-            const selectedRating = document.querySelector('input[name="rating"]:checked');
-
-            if (!selectedRating) {
-                return;
-            }
-
-            const rating = Number(selectedRating.value);
-
-            const card = document.createElement("article");
-            card.className = "review-card";
-
-            const stars = document.createElement("div");
-            stars.className = "review-stars";
-            stars.textContent = "★".repeat(rating);
-
-            const reviewText = document.createElement("p");
-            reviewText.className = "review-text";
-            reviewText.textContent = comment;
-
-            const author = document.createElement("div");
-            author.className = "review-author";
-
-            const avatar = document.createElement("div");
-            avatar.className = "review-avatar";
-            avatar.textContent = name.charAt(0).toUpperCase();
-
-            const info = document.createElement("div");
-
-            const authorName = document.createElement("h3");
-            authorName.textContent = name;
-
-            const authorRole = document.createElement("span");
-            authorRole.textContent = role;
-
-            info.appendChild(authorName);
-            info.appendChild(authorRole);
-
-            author.appendChild(avatar);
-            author.appendChild(info);
-
-            card.appendChild(stars);
-            card.appendChild(reviewText);
-            card.appendChild(author);
-
-            document.querySelector(".reviews-grid").appendChild(card);
-
-            reviewForm.reset();
-        });
-    </script>
-
     <button class="back-to-top"
         onclick="window.scrollTo({ top: 0, behavior: 'smooth' }) ">
         ↑
