@@ -1,0 +1,278 @@
+
+$dark: var(--color-dark);
+$accent: var(--color-accent);
+$accent-hover: var(--color-accent-hover);
+$bg: var(--color-bg);
+$white: var(--color-white);
+$light: var(--color-light);
+$text: var(--color-text);
+$description: var(--color-description);
+$border: var(--color-border);
+$input-border: var(--color-input-border);
+$heading: var(--font-heading);
+$main-font: var(--font-main);
+
+.sign-in-page {
+    display: flex;
+    min-height: calc(100vh - var(--navbar-height));
+    background: $bg;
+
+    .sign-in-image {
+        width: 45%;
+        min-height: 650px;
+        padding: 50px;
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(rgba(25, 54, 44, 0.2), rgba(25, 54, 44, 0.7)), url("../images/background.jpg") center/cover no-repeat;
+        color: $white;
+
+        .image-text {
+            max-width: 400px;
+
+            h2 {
+                font-family: $heading;
+                font-size: 38px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+        }
+    }
+
+    .sign-in-container {
+        width: 55%;
+        padding: 45px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-in-form {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+.form-label {
+    color: $accent;
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sign-in-form {
+    h1 {
+        margin: 15px 0;
+        color: $dark;
+        font-family: $heading;
+        font-size: 36px;
+    }
+
+    .sign-in-description {
+        color: $description;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+}
+
+.account-benefits {
+    padding: 20px;
+    margin-bottom: 25px;
+    background: $light;
+    border: 1px solid $border;
+    border-radius: var(--radius-form);
+
+    p {
+        margin-bottom: 10px;
+        color: $dark;
+        font-weight: bold;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+        color: $text;
+        line-height: 1.9;
+    }
+}
+
+.sign-in-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    .tab-button {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid $accent;
+        border-radius: var(--radius-normal);
+        background: transparent;
+        color: $accent;
+        font-family: $main-font;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+
+        &:hover,
+        &.active {
+            background: $accent;
+            color: $white;
+        }
+    }
+}
+
+.account-form {
+    .sign-in-group {
+        margin-bottom: 18px;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: $dark;
+            font-weight: bold;
+            font-size: var(--font-size-normal);
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid $input-border;
+            border-radius: var(--radius-normal);
+            background: $white;
+            color: $dark;
+            font-family: $main-font;
+            font-size: var(--font-size-normal);
+
+            &:focus {
+                outline: none;
+                border-color: $accent;
+                box-shadow: 0 0 0 3px rgba(185, 94, 60, 0.12);
+            }
+
+            &::placeholder {
+                color: var(--color-placeholder);
+            }
+        }
+    }
+
+    .sign-in-options {
+        margin-bottom: 20px;
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: $text;
+            font-size: var(--font-size-normal);
+
+            input {
+                accent-color: $accent;
+            }
+        }
+    }
+
+    .sign-in-submit {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: var(--radius-normal);
+        background: $accent;
+        color: $white;
+        font-family: $main-font;
+        font-size: var(--font-size-normal);
+        font-weight: bold;
+        cursor: pointer;
+        transition: background var(--transition-normal);
+
+        &:hover {
+            background: $accent-hover;
+        }
+    }
+
+    .create-account {
+        margin-top: 20px;
+        color: $text;
+        font-size: var(--font-size-normal);
+        text-align: center;
+
+        a {
+            color: $accent;
+            font-weight: bold;
+
+            &:hover {
+                color: $accent-hover;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 25px;
+    color: $dark;
+    font-size: var(--font-size-normal);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+.logo small {
+    margin-top: 4px;
+    font-size: var(--font-size-small);
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    &:hover,
+    &.active {
+        color: $accent;
+    }
+}
+
+@media (max-width: 800px) {
+    .sign-in-page {
+        .sign-in-image {
+            width: 40%;
+            padding: 25px;
+
+            .image-text h2 {
+                font-size: 28px;
+            }
+        }
+
+        .sign-in-container {
+            width: 60%;
+            padding: 30px 20px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sign-in-page {
+        flex-direction: column;
+
+        .sign-in-image {
+            width: 100%;
+            min-height: 250px;
+            padding: 25px;
+
+            .image-text h2 {
+                font-size: 28px;
+            }
+        }
+
+        .sign-in-container {
+            width: 100%;
+            padding: 35px 20px;
+        }
+    }
+
+    .sign-in-form h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,480 @@
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 65px;
+    padding: 0 4%;
+    background-color: var(--color-dark);
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    flex-shrink: 0;
+}
+
+.logo span {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo small {
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 30px);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-accent);
+}
+
+/* Sign In Page */
+
+.sign-in-page {
+    min-height: calc(100vh - 65px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    background-color: var(--color-bg);
+}
+
+.sign-in-image {
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(25px, 5vw, 60px);
+    min-height: 500px;
+}
+
+.image-text {
+    color: white;
+    max-width: 400px;
+}
+
+.image-text h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 3vw, 38px);
+    margin-bottom: 15px;
+}
+
+.image-text p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(25px, 5vw, 50px) clamp(20px, 4vw, 30px);
+    min-width: 0;
+}
+
+.sign-in-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-label {
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.sign-in-form h1 {
+    font-family: Georgia, serif;
+    color: var(--color-dark);
+    font-size: clamp(30px, 4vw, 42px);
+    margin: 15px 0;
+}
+
+.sign-in-description {
+    color: var(--color-text);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Account information */
+
+.account-benefits {
+    margin: 22px 0;
+    padding: 15px 18px;
+    background-color: var(--color-bg);
+    border-radius: 5px;
+}
+
+.account-benefits p {
+    margin-bottom: 10px;
+    color: var(--color-dark);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.account-benefits ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--color-text);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Sign In and Create Account tabs */
+
+.sign-in-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tab-button {
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--color-muted);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Forms */
+
+.account-form[hidden] {
+    display: none;
+}
+
+.account-form {
+    animation: formAppear 0.3s ease;
+}
+
+.sign-in-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.sign-in-group label {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.sign-in-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #d5d1c7;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.sign-in-group input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(185, 94, 60, 0.12);
+}
+
+/* Remember me */
+
+.sign-in-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 28px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--color-text);
+}
+
+.remember-me input {
+    accent-color: var(--color-dark);
+}
+
+.sign-in-options a,
+.create-account a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-in-options a:hover,
+.create-account a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+/* Buttons */
+
+.sign-in-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-in-submit:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Links */
+
+.create-account {
+    text-align: center;
+    color: var(--color-text);
+    font-size: 14px;
+    margin-top: 28px;
+    line-height: 1.6;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: var(--color-accent);
+}
+
+/* Animations */
+
+@keyframes formAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 900px) {
+    .sign-in-page {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .sign-in-image {
+        padding: 30px;
+    }
+
+    .sign-in-container {
+        padding: 35px 25px;
+    }
+}
+
+/* Small tablets and phones */
+
+@media (max-width: 700px) {
+    .sign-in-page {
+        grid-template-columns: 1fr;
+    }
+
+    .sign-in-image {
+        min-height: 280px;
+        padding: 30px;
+    }
+
+    .image-text {
+        max-width: 500px;
+    }
+
+    .image-text h2 {
+        font-size: 30px;
+    }
+
+    .sign-in-container {
+        padding: 40px 25px;
+    }
+
+    .sign-in-form {
+        max-width: 500px;
+    }
+
+    .sign-in-form h1 {
+        font-size: 36px;
+    }
+}
+
+/* Mobile phones */
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo span {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .sign-in-image {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .image-text h2 {
+        font-size: 26px;
+    }
+
+    .image-text p {
+        font-size: 14px;
+    }
+
+    .sign-in-container {
+        padding: 30px 18px;
+    }
+
+    .sign-in-form h1 {
+        font-size: 32px;
+    }
+
+    .sign-in-description {
+        font-size: 14px;
+    }
+
+    .account-benefits {
+        padding: 13px;
+    }
+
+    .sign-in-group input {
+        padding: 12px;
+    }
+
+    .tab-button {
+        flex: 1;
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+}
+#login-tab,
+#register-tab {
+    display: none;
+}
+
+.sign-in-tabs {
+    display: flex;
+}
+
+.tab-button {
+    cursor: pointer;
+}
+
+#register-form {
+    display: none;
+}
+
+#login-tab:checked ~ .sign-in-tabs .login-label,
+#register-tab:checked ~ .sign-in-tabs .register-label {
+    background-color: var(--color-dark);
+    color: white;
+}
+
+#register-tab:checked ~ #register-form {
+    display: block;
+}
+
+#register-tab:checked ~ #login-form {
+    display: none;
+}
+
+#login-tab:checked ~ #login-form {
+    display: block;
+}
+
+#login-tab:checked ~ #register-form {
+    display: none;
+}
+
+.account-form input:not([type="checkbox"]):focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(185, 94, 60, 0.15);
+}
+
+.account-form input:not([type="checkbox"]):not(:placeholder-shown):valid {
+    border: 2px solid #198754;
+}
+
+.account-form input:not([type="checkbox"]):not(:placeholder-shown):invalid {
+    border: 2px solid #dc3545;
+}
+
+.account-form input:focus:invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.create-account label {
+    color: var(--color-accent);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.create-account label:hover {
+    color: var(--color-accent-hover);
+}

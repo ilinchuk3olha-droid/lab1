@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Leafwise</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>Leafwise</span>
+            <small>PLANT CARE</small>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">The Garden</a>
+            <a href="sign-in.html" class="active">Sign In</a>
+        </nav>
+    </header>
+
+    <main class="sign-in-page">
+
+        <div class="sign-in-image">
+            <div class="image-text">
+                <h2>Grow your own little jungle.</h2>
+                <p>Take care of your plants and watch them thrive.</p>
+            </div>
+        </div>
+
+        <div class="sign-in-container">
+
+            <div class="sign-in-form">
+
+                <span class="form-label">WELCOME TO LEAFWISE</span>
+
+                <h1>Join Our Community</h1>
+
+                <p class="sign-in-description">
+                    Create an account or sign in to become part
+                    of our plant-loving community.
+                </p>
+
+                <div class="account-benefits">
+                    <p>With a Leafwise account, you can:</p>
+                    <ul>
+                        <li>Add your own plants</li>
+                        <li>Share your feedback and reviews</li>
+                        <li>Manage your personal plant collection</li>
+                    </ul>
+                </div>
+
+                <input type="radio" name="account-tab" id="login-tab" checked>
+                <input type="radio" name="account-tab" id="register-tab">
+
+                <div class="sign-in-tabs">
+                    <label for="login-tab" class="tab-button login-label">
+                        Sign In
+                    </label>
+
+                    <label for="register-tab" class="tab-button register-label">
+                        Create Account
+                    </label>
+                </div>
+
+                <form id="login-form" class="account-form">
+
+                    <div class="sign-in-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <div class="sign-in-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                            minlength="8"
+                            maxlength="30"
+                            pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,30}"
+                            title="Password must contain at least 8 characters, including a letter and a number."
+                        >
+                    </div>
+
+                    <div class="sign-in-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <button type="submit" class="sign-in-submit">
+                        Sign In
+                    </button>
+
+                    <p class="create-account">
+                        New to Leafwise?
+                        <label for="register-tab">
+                            Create an account
+                        </label>
+                    </p>
+
+                </form>
+
+                <form id="register-form" class="account-form">
+
+                    <div class="sign-in-group">
+                        <label for="register-name">Your name</label>
+                        <input
+                            type="text"
+                            id="register-name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                            minlength="2"
+                            maxlength="40"
+                            pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ'’ -]{2,40}"
+                            title="Name must contain 2–40 letters."
+                        >
+                    </div>
+
+                    <div class="sign-in-group">
+                        <label for="register-email">Email address</label>
+                        <input
+                            type="email"
+                            id="register-email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <div class="sign-in-group">
+                        <label for="register-password">Password</label>
+                        <input
+                            type="password"
+                            id="register-password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                            minlength="8"
+                            maxlength="30"
+                            pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,30}"
+                            title="Password must contain at least 8 characters, including a letter and a number."
+                        >
+                    </div>
+
+                    <button type="submit" class="sign-in-submit">
+                        Create Account
+                    </button>
+
+                    <p class="create-account">
+                        Already have an account?
+                        <label for="login-tab">
+                            Sign In
+                        </label>
+                    </p>
+
+                </form>
+
+                <a href="index.html" class="back-home">
+                    ← Back to The Garden
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

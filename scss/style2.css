@@ -1,0 +1,226 @@
+.sign-in-page {
+  display: flex;
+  min-height: calc(100vh - var(--navbar-height));
+  background: var(--color-bg);
+}
+.sign-in-page .sign-in-image {
+  width: 45%;
+  min-height: 650px;
+  padding: 50px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(rgba(25, 54, 44, 0.2), rgba(25, 54, 44, 0.7)), url("../images/background.jpg") center/cover no-repeat;
+  color: var(--color-white);
+}
+.sign-in-page .sign-in-image .image-text {
+  max-width: 400px;
+}
+.sign-in-page .sign-in-image .image-text h2 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+.sign-in-page .sign-in-image .image-text p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.sign-in-page .sign-in-container {
+  width: 55%;
+  padding: 45px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in-page .sign-in-form {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-label {
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.sign-in-form h1 {
+  margin: 15px 0;
+  color: var(--color-dark);
+  font-family: var(--font-heading);
+  font-size: 36px;
+}
+.sign-in-form .sign-in-description {
+  color: var(--color-description);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.account-benefits {
+  padding: 20px;
+  margin-bottom: 25px;
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-form);
+}
+.account-benefits p {
+  margin-bottom: 10px;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+.account-benefits ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--color-text);
+  line-height: 1.9;
+}
+
+.sign-in-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.sign-in-tabs .tab-button {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-normal);
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+.sign-in-tabs .tab-button:hover, .sign-in-tabs .tab-button.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.account-form .sign-in-group {
+  margin-bottom: 18px;
+}
+.account-form .sign-in-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+  font-weight: bold;
+  font-size: var(--font-size-normal);
+}
+.account-form .sign-in-group input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-normal);
+  background: var(--color-white);
+  color: var(--color-dark);
+  font-family: var(--font-main);
+  font-size: var(--font-size-normal);
+}
+.account-form .sign-in-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(185, 94, 60, 0.12);
+}
+.account-form .sign-in-group input::-moz-placeholder {
+  color: var(--color-placeholder);
+}
+.account-form .sign-in-group input::placeholder {
+  color: var(--color-placeholder);
+}
+.account-form .sign-in-options {
+  margin-bottom: 20px;
+}
+.account-form .sign-in-options .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text);
+  font-size: var(--font-size-normal);
+}
+.account-form .sign-in-options .remember-me input {
+  accent-color: var(--color-accent);
+}
+.account-form .sign-in-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-normal);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: var(--font-size-normal);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition-normal);
+}
+.account-form .sign-in-submit:hover {
+  background: var(--color-accent-hover);
+}
+.account-form .create-account {
+  margin-top: 20px;
+  color: var(--color-text);
+  font-size: var(--font-size-normal);
+  text-align: center;
+}
+.account-form .create-account a {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+.account-form .create-account a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 25px;
+  color: var(--color-dark);
+  font-size: var(--font-size-normal);
+  transition: color var(--transition-fast);
+}
+.back-home:hover {
+  color: var(--color-accent);
+}
+
+.logo small {
+  margin-top: 4px;
+  font-size: var(--font-size-small);
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+  .sign-in-page .sign-in-image {
+    width: 40%;
+    padding: 25px;
+  }
+  .sign-in-page .sign-in-image .image-text h2 {
+    font-size: 28px;
+  }
+  .sign-in-page .sign-in-container {
+    width: 60%;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .sign-in-page {
+    flex-direction: column;
+  }
+  .sign-in-page .sign-in-image {
+    width: 100%;
+    min-height: 250px;
+    padding: 25px;
+  }
+  .sign-in-page .sign-in-image .image-text h2 {
+    font-size: 28px;
+  }
+  .sign-in-page .sign-in-container {
+    width: 100%;
+    padding: 35px 20px;
+  }
+  .sign-in-form h1 {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=style2.css.map */

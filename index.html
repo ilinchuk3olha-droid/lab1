@@ -1,468 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leafwise</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-    <title>Leafwise</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <body>
+       <header class="navbar">
+    <a href="index.html" class="logo">
+        <span>Leafwise</span>
+        <b>PLANT CARE</b>
+    </a>
 
-    <header class="navbar">
-        <a href="index.html" class="logo">
-            <span>Leafwise</span>
-            <b>PLANT CARE</b>
-        </a>
+    <input type="checkbox" id="menu-toggle">
 
-        <nav class="nav-links">
-            <details class="dropdown">
-                <summary class="dropdown-button">
-                    The Garden
-                    <span class="arrow">▼</span>
-                </summary>
+    <label for="menu-toggle" class="menu-icon" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
-                <div class="submenu">
-                    <a href="#garden">Green Spaces</a>
+    <nav class="nav-links">
+        <details class="dropdown">
+            <summary class="dropdown-button">
+                The Garden
+                <span class="arrow">▼</span>
+            </summary>
 
-                    <div class="plant-dropdown">
-                        <a href="#" class="plant-dropdown-title">
-                            Home Page
-                        </a>
+            <div class="submenu">
+                <a href="#garden">Green Spaces</a>
+                <div class="plant-dropdown">
+                    <a href="#" class="plant-dropdown-title">Home Page</a>
+                </div>
+            </div>
+        </details>
 
-                        <div class="plant-submenu">
-                            <a href="monstera.html">Monstera</a>
-                            <a href="snake-plant.html">Snake Plant</a>
-                            <a href="peace-lily.html">Peace Lily</a>
-                            <a href="fiddle-leaf.html">Fiddle Leaf Fig</a>
-                            <a href="orchid.html">Orchid</a>
+        <a href="#add-plant" class="add-button">Add a Plant</a>
+        <a href="sign-in.html" class="sign-in-link">Sign In</a>
+    </nav>
+</header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="small-title">Simple care for happier plants</p>
+                    <h1>Grow with<br><span>confidence.</span></h1>
+                    <p class="description">Clear, practical care guides for the plants that make a home feel alive.</p>
+                    <a href="#garden" class="main-button btn btn-success">Browse 4 plants <span>→</span></a>
+                </div>
+
+                <img src="pages/background.jpg" alt="Plants" class="img-fluid" width="300" height="300">
+            </div>
+        </section>
+
+        <section class="event-promo">
+            <div class="event-promo-content">
+                <p class="small-title">A SPECIAL EVENT BY LEAFWISE</p>
+
+                <h2>Let's grow<br><span>together.</span></h2>
+
+                <p>
+                    Join us for a special afternoon dedicated to plants,
+                    creativity and the art of plant care.
+                </p>
+
+                <div class="event-promo-details">
+                    <span>December 15, 2026</span>
+                    <span>14:00</span>
+                    <span>Green Studio</span>
+                </div>
+
+                <a href="invitation.html" class="event-promo-button">
+                    Get Your Invitation <span>→</span>
+                </a>
+            </div>
+
+            <div class="event-promo-image">
+                <img src="pages/background.jpg" alt="Green plants">
+
+                <div class="event-promo-label">
+                    <span>LEAFWISE</span>
+                    <strong>Plant Care<br>Workshop</strong>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="garden" id="garden">
+            <div class="container py-5">
+                <div class="garden-heading text-center mb-5">
+                    <p class="small-title">DISCOVER YOUR GREEN WORLD</p>
+                    <h2>The Garden</h2>
+                    <p>Explore our collection of indoor plants and discover how to care for them.</p>
+                </div>
+
+                <div class="garden-controls mb-4">
+                    <input type="text" id="plantSearch" class="form-control" placeholder="Search plants..." aria-label="Search plants">
+
+                    <div class="filters">
+                        <button type="button" class="filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="filter-btn" data-filter="easy">Easy</button>
+                        <button type="button" class="filter-btn" data-filter="medium">Medium</button>
+                        <button type="button" class="filter-btn" data-filter="hard">Hard</button>
+                    </div>
+                </div>
+
+                <p class="garden-description">Click any plant for full care instructions and community Q&A.</p>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 plant-grid">
+
+                    <article class="col plant" data-name="monstera" data-difficulty="easy">
+                        <div class="card h-100 shadow-sm">
+                            <img src="pages/monstera.jpg" class="card-img-top" alt="Monstera">
+
+                            <div class="plant-info card-body d-flex flex-column">
+                                <h2 class="card-title">Monstera</h2>
+                                <p class="card-text">Monstera is a tropical plant with large green leaves. It likes bright indirect light and regular watering.</p>
+                                <p class="plant-difficulty"><strong>Difficulty:</strong> Easy</p>
+                                <a href="monstera.html" class="plant-button btn btn-outline-success mt-auto">View plant</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col plant" data-name="peace lily" data-difficulty="medium">
+                        <div class="card h-100 shadow-sm">
+                            <img src="pages/peacelily.jpg" class="card-img-top" alt="Peace Lily">
+
+                            <div class="plant-info card-body d-flex flex-column">
+                                <h2 class="card-title">Peace Lily</h2>
+                                <p class="card-text">Peace Lily has beautiful green leaves and white flowers. It prefers indirect light and moist soil.</p>
+                                <p class="plant-difficulty"><strong>Difficulty:</strong> Medium</p>
+                                <a href="peace-lily.html" class="plant-button btn btn-outline-success mt-auto">View plant</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col plant" data-name="fiddle leaf fig" data-difficulty="medium">
+                        <div class="card h-100 shadow-sm">
+                            <img src="pages/leaf.jpg" class="card-img-top" alt="Fiddle Leaf Fig">
+
+                            <div class="plant-info card-body d-flex flex-column">
+                                <h2 class="card-title">Fiddle Leaf Fig</h2>
+                                <p class="card-text">Fiddle Leaf Fig is a popular indoor plant with large leaves. It needs bright light and regular care.</p>
+                                <p class="plant-difficulty"><strong>Difficulty:</strong> Medium</p>
+                                <a href="fiddle-leaf.html" class="plant-button btn btn-outline-success mt-auto">View plant</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col plant" data-name="orchid" data-difficulty="hard">
+                        <div class="card h-100 shadow-sm">
+                            <img src="pages/orchid.jpg" class="card-img-top" alt="Orchid">
+
+                            <div class="plant-info card-body d-flex flex-column">
+                                <h2 class="card-title">Orchid</h2>
+                                <p class="card-text">Orchid is a beautiful flowering plant. It needs bright indirect light and careful watering.</p>
+                                <p class="plant-difficulty"><strong>Difficulty:</strong> Hard</p>
+                                <a href="orchid.html" class="plant-button btn btn-outline-success mt-auto">View plant</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p id="noResults" hidden>No plants found.</p>
+            </div>
+        </section>
+
+
+        <section class="add-plant" id="add-plant">
+            <div class="add-plant-content">
+                <p class="small-title">SHARE YOUR GREEN WORLD</p>
+                <h1>Add a new<br><span>plant.</span></h1>
+                <p class="description">Help our community grow by sharing your favourite plants and their care instructions.</p>
+            </div>
+
+            <form class="add-plant-form" id="plantForm">
+                <h2>Plant information</h2>
+                <p class="form-description">Fill in the information about your plant.</p>
+
+                <div class="add-form-group">
+                    <label for="plantPhoto">Plant photo</label>
+                    <input type="file" id="plantPhoto" class="form-control" accept="image/*">
+                    <img id="photoPreview" alt="Plant preview" hidden>
+                </div>
+
+                <div class="add-form-row">
+                    <div class="add-form-group">
+                        <label for="plantName">Plant name *</label>
+                        <input type="text" id="plantName" class="form-control" placeholder="Monstera" required minlength="2" maxlength="40" pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ'’ -]{2,40}" title="Enter a plant name using 2–40 letters.">
+                    </div>
+
+                    <div class="add-form-group">
+                        <label for="scientificName">Scientific name</label>
+                        <input type="text" id="scientificName" class="form-control" placeholder="Monstera deliciosa" pattern="[A-Za-z -]{2,60}" title="Use only English letters, spaces or hyphens.">
+                    </div>
+                </div>
+
+                <div class="add-form-row">
+                    <div class="add-form-group">
+                        <label for="difficulty">Difficulty *</label>
+                        <select id="difficulty" class="form-select" required>
+                            <option value="" disabled selected>Select difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="add-form-group">
+                        <label for="light">Light</label>
+                        <select id="light" class="form-select">
+                            <option value="Bright indirect light">Bright indirect light</option>
+                            <option value="Direct sunlight">Direct sunlight</option>
+                            <option value="Low light">Low light</option>
+                            <option value="Partial shade">Partial shade</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="add-form-row">
+                    <div class="add-form-group">
+                        <label for="watering">Watering</label>
+                        <input type="text" id="watering" class="form-control" placeholder="Once a week" maxlength="50">
+                    </div>
+
+                    <div class="add-form-group">
+                        <label for="humidity">Humidity</label>
+                        <input type="text" id="humidity" class="form-control" placeholder="60-70%" pattern="[0-9]{1,3}(-[0-9]{1,3})?%?" title="Enter humidity as a number or range, for example 60-70%.">
+                    </div>
+                </div>
+
+                <div class="add-form-row">
+                    <div class="add-form-group">
+                        <label for="temperature">Temperature</label>
+                        <input type="text" id="temperature" class="form-control" placeholder="18-25°C" pattern="[0-9]{1,2}(-[0-9]{1,2})?°?C?" title="Enter temperature, for example 18-25°C.">
+                    </div>
+
+                    <div class="add-form-group">
+                        <label for="toxicity">Toxicity</label>
+                        <select id="toxicity" class="form-select">
+                            <option value="Non-toxic">Non-toxic</option>
+                            <option value="Toxic to pets">Toxic to pets</option>
+                            <option value="Toxic to humans">Toxic to humans</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="add-form-group">
+                    <label for="description">Plant description</label>
+                    <textarea id="description" class="form-control" placeholder="Write about your plant..." rows="4" minlength="10" maxlength="500"></textarea>
+                </div>
+
+                <div class="add-form-group">
+                    <label for="careTips">Care tips</label>
+                    <textarea id="careTips" class="form-control" placeholder="Write some care tips..." rows="4" minlength="5" maxlength="500"></textarea>
+                </div>
+
+                <button type="submit" class="submit-plant btn btn-success">Add Plant</button>
+            </form>
+        </section>
+
+        <section class="reviews" id="reviews">
+            <div class="reviews-heading">
+                <p class="small-title">COMMUNITY FEEDBACK</p>
+                <h2>What Our Community Says</h2>
+                <p>See how Leafwise helps plant lovers take better care of their green friends.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <details class="review-card">
+                    <summary>
+                        <div class="review-author">
+                            <div class="review-avatar">A</div>
+                            <div>
+                                <h3>Anna Wilson</h3>
+                                <span>★★★★★ 5/5</span>
+                            </div>
+                        </div>
+                    </summary>
+
+                    <p class="review-text">I always struggled with taking care of my plants. Leafwise makes everything simple and easy to understand!</p>
+                </details>
+
+                <details class="review-card">
+                    <summary>
+                        <div class="review-author">
+                            <div class="review-avatar">M</div>
+                            <div>
+                                <h3>Michael Brown</h3>
+                                <span>★★★★★ 5/5</span>
+                            </div>
+                        </div>
+                    </summary>
+
+                    <p class="review-text">A beautiful and useful website! I love how easy it is to find information about different plants.</p>
+                </details>
+
+                <details class="review-card">
+                    <summary>
+                        <div class="review-author">
+                            <div class="review-avatar">S</div>
+                            <div>
+                                <h3>Sophia Miller</h3>
+                                <span>★★★★☆ 4/5</span>
+                            </div>
+                        </div>
+                    </summary>
+
+                    <p class="review-text">The care guides are very helpful. Now I feel more confident looking after my houseplants.</p>
+                </details>
+            </div>
+
+            <div class="review-form-container">
+                <div class="review-form-heading">
+                    <p class="small-title">SHARE YOUR EXPERIENCE</p>
+                    <h2>Leave a Review</h2>
+                    <p>Tell us what you think about Leafwise!</p>
+                </div>
+
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewName">Your name</label>
+                        <input type="text" id="reviewName" class="form-control" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewRole">Who are you?</label>
+                        <input type="text" id="reviewRole" class="form-control" placeholder="For example: Plant lover" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your rating</label>
+                        <div class="rating">
+                            <input type="radio" name="rating" id="star5" value="5" required>
+                            <label for="star5">★</label>
+
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4">★</label>
+
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3">★</label>
+
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2">★</label>
+
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1">★</label>
                         </div>
                     </div>
-                </div>
-            </details>
 
-            <a href="#add-plant" class="add-button">Add a Plant</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-
-            <div class="hero-text">
-                <p class="small-title">
-                    Simple care for happier plants
-                </p>
-
-                <h1>
-                    Grow with<br>
-                    <span>confidence.</span>
-                </h1>
-
-                <p class="description">
-                    Clear, practical care guides for the plants
-                    that make a home feel alive.
-                </p>
-
-                <button class="main-button"
-                    onclick="document.querySelector('#garden').scrollIntoView({ behavior: 'smooth' })">
-                    Browse 5 plants
-                    <span>→</span>
-                </button>
-            </div>
-
-            <img src="pages/background.jpg"
-                 alt="Plants"
-                 width="300"
-                 height="300">
-        </div>
-    </section>
-
-    <section class="garden" id="garden">
-
-        <h2>The Garden</h2>
-
-        <input
-            type="text"
-            id="plantSearch"
-            placeholder="Search plants..."
-            aria-label="Search plants"
-        >
-
-        <div class="filters">
-            <button type="button" class="filter-btn active" data-filter="all">
-                All
-            </button>
-
-            <button type="button" class="filter-btn" data-filter="easy">
-                Easy
-            </button>
-
-            <button type="button" class="filter-btn" data-filter="medium">
-                Medium
-            </button>
-
-            <button type="button" class="filter-btn" data-filter="hard">
-                Hard
-            </button>
-        </div>
-
-        <p>
-            Click any plant for full care instructions and community Q&A.
-        </p>
-
-        <div class="plant-grid">
-
-            <article class="plant"
-                     data-name="monstera"
-                     data-difficulty="easy">
-
-                <img src="pages/monstera.jpg" alt="Monstera" width="300" height="300">
-
-                <div class="plant-info">
-                    <h2>Monstera</h2>
-                    <p>
-                        Monstera is a tropical plant with large green leaves.
-                        It likes bright indirect light and regular watering.
-                    </p>
-                    <p><strong>Difficulty:</strong> Easy</p>
-                    <a href="monstera.html" class="plant-button">View plant</a>
-                </div>
-            </article>
-
-            <article class="plant"
-                     data-name="snake plant"
-                     data-difficulty="easy">
-
-                <img src="pages/snakeplant.jpg" alt="Snake Plant" width="300" height="300">
-
-                <div class="plant-info">
-                    <h2>Snake Plant</h2>
-                    <p>
-                        Snake Plant is an easy houseplant. It does not need
-                        much water and can grow in different light conditions.
-                    </p>
-                    <p><strong>Difficulty:</strong> Easy</p>
-                    <a href="snake-plant.html" class="plant-button">View plant</a>
-                </div>
-            </article>
-
-            <article class="plant"
-                     data-name="peace lily"
-                     data-difficulty="medium">
-
-                <img src="pages/peacelily.jpg" alt="Peace Lily" width="300" height="300">
-
-                <div class="plant-info">
-                    <h2>Peace Lily</h2>
-                    <p>
-                        Peace Lily has beautiful green leaves and white flowers.
-                        It prefers indirect light and moist soil.
-                    </p>
-                    <p><strong>Difficulty:</strong> Medium</p>
-                    <a href="peace-lily.html" class="plant-button">View plant</a>
-                </div>
-            </article>
-
-            <article class="plant"
-                     data-name="fiddle leaf fig"
-                     data-difficulty="medium">
-
-                <img src="pages/leaf.jpg" alt="Fiddle Leaf Fig" width="300" height="300">
-
-                <div class="plant-info">
-                    <h2>Fiddle Leaf Fig</h2>
-                    <p>
-                        Fiddle Leaf Fig is a popular indoor plant with large leaves.
-                        It needs bright light and regular care.
-                    </p>
-                    <p><strong>Difficulty:</strong> Medium</p>
-                    <a href="fiddle-leaf.html" class="plant-button">View plant</a>
-                </div>
-            </article>
-
-            <article class="plant"
-                     data-name="orchid"
-                     data-difficulty="hard">
-
-                <img src="pages/orchid.jpg" alt="Orchid" width="300" height="300">
-
-                <div class="plant-info">
-                    <h2>Orchid</h2>
-                    <p>
-                        Orchid is a beautiful flowering plant.
-                        It needs bright indirect light and careful watering.
-                    </p>
-                    <p><strong>Difficulty:</strong> Hard</p>
-                    <a href="orchid.html" class="plant-button">View plant</a>
-                </div>
-            </article>
-
-        </div>
-
-        <p id="noResults" hidden>
-            No plants found.
-        </p>
-
-    </section>
-
-    <section class="add-plant" id="add-plant">
-
-        <div class="add-plant-content">
-            <p class="small-title">SHARE YOUR GREEN WORLD</p>
-
-            <h1>
-                Add a new<br>
-                <span>plant.</span>
-            </h1>
-
-            <p class="description">
-                Help our community grow by sharing your favourite plants
-                and their care instructions.
-            </p>
-        </div>
-
-        <form class="add-plant-form" id="plantForm">
-
-            <h2>Plant information</h2>
-
-            <p class="form-description">
-                Fill in the information about your plant.
-            </p>
-
-            <div class="add-form-group">
-                <label for="plantPhoto">Plant photo</label>
-
-                <input type="file" id="plantPhoto" accept="image/*">
-
-                <img id="photoPreview" alt="Plant preview" hidden>
-            </div>
-
-            <div class="add-form-row">
-                <div class="add-form-group">
-                    <label for="plantName">Plant name *</label>
-                    <input type="text" id="plantName" placeholder="Monstera" required>
-                </div>
-
-                <div class="add-form-group">
-                    <label for="scientificName">Scientific name</label>
-                    <input type="text" id="scientificName" placeholder="Monstera deliciosa">
-                </div>
-            </div>
-
-            <div class="add-form-row">
-                <div class="add-form-group">
-                    <label for="difficulty">Difficulty *</label>
-                    <select id="difficulty" required>
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>
-                </div>
-
-                <div class="add-form-group">
-                    <label for="light">Light</label>
-                    <select id="light">
-                        <option value="Bright indirect light">Bright indirect light</option>
-                        <option value="Direct sunlight">Direct sunlight</option>
-                        <option value="Low light">Low light</option>
-                        <option value="Partial shade">Partial shade</option>
-                    </select>
-                </div>
-
-            </div>
-
-            <div class="add-form-row">
-                <div class="add-form-group">
-                    <label for="watering">Watering</label>
-                    <input type="text" id="watering" placeholder="Once a week">
-                </div>
-
-                <div class="add-form-group">
-                    <label for="humidity">Humidity</label>
-                    <input type="text" id="humidity" placeholder="60-70%">
-                </div>
-            </div>
-
-            <div class="add-form-row">
-                <div class="add-form-group">
-                    <label for="temperature">Temperature</label>
-                    <input type="text" id="temperature" placeholder="18-25°C">
-                </div>
-
-                <div class="add-form-group">
-                    <label for="toxicity">Toxicity</label>
-                    <select id="toxicity">
-                        <option value="Non-toxic">Non-toxic</option>
-                        <option value="Toxic to pets">Toxic to pets</option>
-                        <option value="Toxic to humans">Toxic to humans</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="add-form-group">
-                <label for="description">Plant description</label>
-                <textarea id="description" placeholder="Write about your plant..." rows="4"></textarea>
-            </div>
-
-            <div class="add-form-group">
-                <label for="careTips">Care tips</label>
-                <textarea id="careTips" placeholder="Write some care tips..." rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="submit-plant">
-                Add Plant
-            </button>
-
-        </form>
-    </section>
-
-    <section class="reviews" id="reviews">
-
-        <div class="reviews-heading">
-            <p class="small-title">COMMUNITY FEEDBACK</p>
-
-            <h2>What Our Community Says</h2>
-
-            <p>
-                See how Leafwise helps plant lovers take better care
-                of their green friends.
-            </p>
-        </div>
-
-        <div class="reviews-grid">
-
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-
-                <p class="review-text">
-                    "I always struggled with taking care of my plants.
-                    Leafwise makes everything simple and easy to understand!"
-                </p>
-
-                <div class="review-author">
-                    <div class="review-avatar">A</div>
-                    <div>
-                        <h3>Anna Wilson</h3>
-                        <span>Plant lover</span>
+                    <div class="form-group">
+                        <label for="reviewComment">Your comment</label>
+                        <textarea id="reviewComment" class="form-control" placeholder="Write your review..." rows="4" required></textarea>
                     </div>
-                </div>
-            </article>
 
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-
-                <p class="review-text">
-                    "A beautiful and useful website!
-                    I love how easy it is to find information about different plants."
-                </p>
-
-                <div class="review-author">
-                    <div class="review-avatar">M</div>
-                    <div>
-                        <h3>Michael Brown</h3>
-                        <span>Beginner gardener</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-
-                <p class="review-text">
-                    "The care guides are very helpful.
-                    Now I feel more confident looking after my houseplants."
-                </p>
-
-                <div class="review-author">
-                    <div class="review-avatar">S</div>
-                    <div>
-                        <h3>Sophia Miller</h3>
-                        <span>Plant enthusiast</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <div class="review-form-container">
-
-            <div class="review-form-heading">
-                <p class="small-title">SHARE YOUR EXPERIENCE</p>
-                <h2>Leave a Review</h2>
-                <p>Tell us what you think about Leafwise!</p>
+                    <button type="submit" class="submit-review btn btn-success">Submit Review</button>
+                </form>
             </div>
+        </section>
 
-            <form class="review-form" id="reviewForm">
+        <footer>
+            <p>Leafwise © A community plant care encyclopedia.</p>
+        </footer>
 
-                <div class="form-group">
-                    <label for="reviewName">Your name</label>
-                    <input
-                        type="text"
-                        id="reviewName"
-                        placeholder="Enter your name"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="reviewRole">Who are you?</label>
-                    <input
-                        type="text"
-                        id="reviewRole"
-                        placeholder="For example: Plant lover"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label>Your rating</label>
-
-                    <div class="rating">
-                        <input type="radio" name="rating" id="star5" value="5" required>
-                        <label for="star5">★</label>
-
-                        <input type="radio" name="rating" id="star4" value="4">
-                        <label for="star4">★</label>
-
-                        <input type="radio" name="rating" id="star3" value="3">
-                        <label for="star3">★</label>
-
-                        <input type="radio" name="rating" id="star2" value="2">
-                        <label for="star2">★</label>
-
-                        <input type="radio" name="rating" id="star1" value="1">
-                        <label for="star1">★</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="reviewComment">Your comment</label>
-                    <textarea
-                        id="reviewComment"
-                        placeholder="Write your review..."
-                        rows="4"
-                        required
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="submit-review">
-                    Submit Review
-                </button>
-
-            </form>
-        </div>
-
-    </section>
-
-    <footer>
-        <p>
-            Leafwise © A community plant care encyclopedia.
-        </p>
-    </footer>
-    <button class="back-to-top"
-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' }) ">
-        ↑
-    </button>
-
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    </body>
 </html>
