@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    padding: 40px 20px;
+    background-color: #f5f2ea;
+    font-family: Arial, sans-serif;
+    color: #19362c;
+}
+
+.envelope {
+    position: relative;
+    width: 340px;
+    height: 220px;
+    background-color: #d9cbb5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 170px solid transparent;
+    border-right: 170px solid transparent;
+    border-top: 120px solid #c7b69c;
+    z-index: 2;
+}
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 170px solid #e5d8c4;
+    border-right: 170px solid #e5d8c4;
+    border-top: 110px solid transparent;
+}
+
+.seal {
+    position: absolute;
+    z-index: 3;
+    top: 85px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #b95e3c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.invitation {
+    width: 600px;
+    max-width: 100%;
+    padding: 55px 45px;
+    background-color: #fffdf8;
+    border: 1px solid #d9cbb5;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.invitation-logo {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.invitation-subtitle {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #b95e3c;
+    margin-bottom: 35px;
+}
+
+.invitation h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.invitation-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.event-name {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #b95e3c;
+    margin-bottom: 30px;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 30px;
+}
+
+.event-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event-details span:first-child {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #b95e3c;
+    text-transform: uppercase;
+}
+
+.event-details span:last-child {
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+.invitation-footer {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.print-button {
+    padding: 14px 32px;
+    border: none;
+    background-color: #19362c;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.print-button:hover {
+    background-color: #b95e3c;
+}
+
+@media (max-width: 600px) {
+    .invitation {
+        padding: 35px 20px;
+    }
+
+    .invitation h1 {
+        font-size: 30px;
+    }
+
+    .event-details {
+        gap: 18px;
+    }
+
+    .event-details span:last-child {
+        font-size: 14px;
+    }
+
+    .envelope {
+        width: 280px;
+        height: 180px;
+    }
+
+    .envelope::before {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-top-width: 100px;
+    }
+
+    .envelope::after {
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-top-width: 90px;
+    }
+
+    .seal {
+        top: 70px;
+    }
+}
+
+@media print {
+    body {
+        min-height: auto;
+        padding: 0;
+        background: white;
+        gap: 25px;
+    }
+
+    .print-button {
+        display: none;
+    }
+
+    .envelope,
+    .invitation {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .invitation {
+        border: 1px solid #d9cbb5;
+    }
+
+    @page {
+        margin: 15mm;
+    }
+}
